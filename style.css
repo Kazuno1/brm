@@ -669,312 +669,254 @@ body {
 }
 
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .pricing-layout {
-    grid-template-columns: 1fr;
-  }
+/* =====================================================
+   MOBILE VIEW CONFIGURATION
+   Edit values here to customize mobile behavior easily
+   ===================================================== */
 
-  .pricing-image {
-    order: -1;
-    margin-bottom: 20px;
-  }
-}
-
-/* ================================
-   UNIVERSAL BUTTON HOVER EFFECTS
-   ================================ */
-
-/* Primary button hover */
-.btn-primary:hover,
-.prod-btn:hover,
-.card-footer button:hover {
-  background: #0a1633;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-}
-
-/* Outline button hover */
-.btn-outline:hover,
-.btn-outline-lg:hover,
-.btn-outline-sm:hover {
-  border-color: #0d1a44;
-  color: #0d1a44;
-  background: rgba(13,26,68,0.08);
-  transform: translateY(-2px);
-}
-
-/* Banner button hover */
-.banner-btn:hover {
-  background: #0a1633;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.25);
-  transform: translateY(-3px);
-}
-
-/* Dark button hover */
-.btn-dark:hover {
-  background: #0a1633;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-}
-
-/* Billing toggle pills */
-.billing-pill:hover {
-  background: rgba(11,33,72,0.12);
-}
-
-.billing-pill.active:hover {
-  background: #0a1633;
-}
-
-/* Drug tabs hover */
-.drug-tab:hover:not(.active) {
-  background: #f0f4f8;
-  border-color: #b4c4d1;
-  transform: translateY(-2px);
-}
-
-/* Active drug tab hover */
-.drug-tab.active:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-
-/* Smooth motion for all */
-.btn-primary,
-.btn-outline,
-.btn-dark,
-.btn-outline-lg,
-.banner-btn,
-.prod-btn,
-.btn-outline-sm,
-.billing-pill,
-.drug-tab,
-.card-footer button {
-  transition: all 0.22s ease-in-out;
-}
-
-/* ================================================
-   MOBILE VIEW (max-width: 768px)
-   ================================================ */
 @media (max-width: 768px) {
 
-  /* ---------- GLOBAL ---------- */
-  .container {
-    padding: 0 14px;
+  /* ======================
+     GLOBAL CONTROLS
+     ====================== */
+
+  :root {
+    --mobile-padding: 14px;
+    --mobile-gap: 18px;
+    --mobile-radius: 20px;
+
+    --h1-size: 32px;
+    --h2-size: 28px;
+    --text-size: 14px;
+    --small-text: 12px;
+
+    --btn-height: 48px;
+    --btn-font: 16px;
   }
 
-  /* ---------- NAVIGATION ---------- */
+  body {
+    font-size: var(--text-size);
+  }
+
+  .container {
+    padding: 0 var(--mobile-padding);
+  }
+
+  /* ======================
+     NAVIGATION
+     ====================== */
+
   .menu {
-    display: none; /* hide desktop menu */
+    display: none; /* hide desktop nav */
   }
 
   .nav-buttons {
     gap: 8px;
   }
 
-  .btn-primary, .btn-outline {
-    padding: 8px 16px;
+  .btn-primary,
+  .btn-outline {
     font-size: 13px;
+    padding: 8px 14px;
   }
 
-  /* ---------- HERO SECTION ---------- */
+  /* ======================
+     HERO SECTION
+     ====================== */
+
   .hero {
-    padding-top: 35px;
+    padding-top: 32px;
     text-align: center;
   }
 
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: var(--mobile-gap);
   }
 
   .hero-title,
-  .hero-left h1 {
-    font-size: 32px;
-    line-height: 1.3;
-  }
-
-  #line1, #line2 {
-    font-size: 32px !important;
+  #line1,
+  #line2 {
+    font-size: var(--h1-size);
+    line-height: 1.25;
     display: block;
   }
 
   .subtitle {
-    font-size: 14px;
+    font-size: var(--text-size);
     margin-top: 8px;
   }
 
   .hero-buttons {
-    margin-top: 22px;
     flex-direction: column;
     gap: 12px;
+    margin-top: 20px;
   }
 
   .btn-dark,
   .btn-outline-lg {
     width: 100%;
-    font-size: 16px;
+    height: var(--btn-height);
+    font-size: var(--btn-font);
     padding: 12px 0;
   }
 
-  /* Right side checklist */
+  /* ❌ REMOVE HERO RIGHT TEXT ON MOBILE */
   .hero-right {
-    border-left: none;
-    padding-left: 0;
-    font-size: 12px;
-    gap: 14px;
+    display: none;
   }
 
-  /* ---------- BANNER ---------- */
+  /* ======================
+     BANNER SECTION
+     ====================== */
+
   .banner-box {
     height: auto;
-    padding: 40px 20px 0;
+    padding: 36px 18px 0;
+    border-radius: var(--mobile-radius);
   }
 
   .banner-box h2 {
-    font-size: 30px;
+    font-size: var(--h2-size);
   }
 
   .floating-btn {
-    top: 115px;
+    top: 100px;
   }
 
   .banner-btn {
-    padding: 12px 32px;
     font-size: 18px;
+    padding: 12px 28px;
   }
 
   .banner-img {
     width: 100%;
     height: auto;
-    margin-top: 40px;
+    margin-top: 36px;
   }
 
-  /* ---------- BENEFITS CARD ---------- */
+  /* ======================
+     BENEFITS CARD
+     ====================== */
+
   .benefits-card {
     grid-template-columns: 1fr;
-    margin-top: -50px;
-    padding: 24px;
+    margin-top: -45px;
+    padding: 22px;
+    gap: 20px;
+    border-radius: var(--mobile-radius);
   }
 
   .benefit p {
-    font-size: 14px;
+    font-size: var(--text-size);
   }
 
-  /* ---------- PRODUCT SECTION ---------- */
+  /* ======================
+     PRODUCTS SECTION
+     ====================== */
+
   .products-title {
-    font-size: 32px;
+    font-size: var(--h1-size);
   }
 
   .products-subtitle {
-    font-size: 15px;
+    font-size: var(--text-size);
   }
 
   .products-cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr; /* change to 1fr for single column */
     gap: 16px;
   }
 
   .product-card {
-    padding: 18px 14px;
-  }
-
-  .product-img {
-    max-width: 100%;
+    padding: 16px;
+    border-radius: var(--mobile-radius);
   }
 
   .desc {
-    font-size: 13px;
+    font-size: var(--small-text);
   }
 
-  /* If 2 columns feels too tight, switch to 1 column:
-     Uncomment if needed:
+  /* ======================
+     PRICING SECTION
+     ====================== */
 
-  .products-cards {
-    grid-template-columns: 1fr;
-  }
-  */
-
-  /* ---------- PRICING SECTION ---------- */
   .pricing-title {
-    font-size: 36px;
+    font-size: var(--h1-size);
   }
 
   .pricing-subtitle {
-    font-size: 15px;
+    font-size: var(--text-size);
   }
 
-  /* Toggle buttons full width */
   .billing-toggle {
     width: 100%;
-    justify-content: center;
   }
+
   .billing-pill {
     flex: 1;
     text-align: center;
+    font-size: 14px;
   }
 
-  /* Drug tabs */
-  .drug-tabs {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
   .drug-tab {
     width: 100%;
-    text-align: center;
-    font-size: 15px;
+    font-size: 14px;
     padding: 10px 0;
   }
 
-  /* Pricing Layout */
   .pricing-layout {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 24px;
   }
 
-  /* Pricing Card */
   .pricing-card {
     width: 100%;
     height: auto;
-    padding-bottom: 30px;
+    padding-bottom: 28px;
   }
 
   .card-header h3 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
-  .card-header .price-main {
-    font-size: 30px;
+  .price-main {
+    font-size: 28px;
   }
 
   .feature-list li {
-    font-size: 16px;
-    margin-bottom: 14px;
+    font-size: 15px;
+    margin-bottom: 12px;
   }
 
   .card-footer {
     position: relative;
-    bottom: 0;
-    margin-top: 20px;
-    padding: 0;
+    margin-top: 16px;
   }
 
-  .card-footer button {
+  .card-footer button,
+  .card-footer a {
     width: 100%;
+    height: var(--btn-height);
   }
 
-  /* ---------- MODEL IMAGE ---------- */
+  /* ======================
+     MODEL IMAGE
+     ====================== */
+
   .model-wrapper {
     margin-top: 10px;
   }
 
   .model-bg {
     width: 100%;
-    height: 260px;
+    height: 240px;
+    border-radius: var(--mobile-radius);
   }
 
   .model-img {
-    height: 320px;
+    height: 300px;
   }
 }
+
+
