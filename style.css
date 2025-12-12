@@ -920,73 +920,45 @@ body {
 }
 
 /* =====================================================
-   MOBILE BANNER — MINIFIED DESKTOP STYLE
+   MOBILE — HORIZONTAL BENEFITS (MINIFIED DESKTOP STYLE)
    ===================================================== */
 @media (max-width: 768px) {
 
-  /* ---------- BANNER WRAPPER ---------- */
-  .banner {
-    margin-top: 10px;
-  }
-
-  .banner-box {
-    padding: 28px 18px 16px;
-    height: auto;
-    border-radius: 22px;
-  }
-
-  /* ---------- TITLE ---------- */
-  .banner-box h2 {
-    font-size: 26px;
-    line-height: 1.2;
-    margin-top: 0;
-    margin-bottom: 12px;
-  }
-
-  /* ---------- CTA BUTTON ---------- */
-  .floating-btn {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    margin: 10px auto 14px;
-  }
-
-  .banner-btn {
-    font-size: 16px;
-    padding: 10px 26px;
-    border-radius: 999px;
-  }
-
-  /* ---------- IMAGE ---------- */
-  .banner-img-wrap {
-    margin-top: 10px;
-  }
-
-  .banner-img {
-    width: 100%;
-    height: auto;
-    max-height: 240px;
-    object-fit: contain;
-  }
-
-  /* ---------- BENEFITS CARD ---------- */
+  /* Benefits container */
   .benefits-card {
-    margin-top: -28px; /* attaches card closer to banner */
-    padding: 20px 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 18px 16px;
+    margin-top: -28px;
     border-radius: 20px;
-    gap: 18px;
   }
 
+  /* Hide scrollbar (clean iOS look) */
+  .benefits-card::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Each benefit item */
   .benefit {
+    flex: 0 0 70%;
+    scroll-snap-align: center;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 16px 14px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
     text-align: center;
   }
 
+  /* Icons */
   .benefit img {
-    width: 36px;
+    width: 34px;
     margin-bottom: 6px;
   }
 
+  /* Text */
   .benefit p {
     font-size: 13px;
     line-height: 1.35;
