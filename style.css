@@ -919,4 +919,76 @@ body {
   }
 }
 
+/* =====================================================
+   MOBILE BANNER — MINIFIED DESKTOP STYLE
+   ===================================================== */
+@media (max-width: 768px) {
 
+  /* ---------- BANNER WRAPPER ---------- */
+  .banner {
+    margin-top: 10px;
+  }
+
+  .banner-box {
+    padding: 28px 18px 16px;
+    height: auto;
+    border-radius: 22px;
+  }
+
+  /* ---------- TITLE ---------- */
+  .banner-box h2 {
+    font-size: 26px;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  /* ---------- CTA BUTTON ---------- */
+  .floating-btn {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 10px auto 14px;
+  }
+
+  .banner-btn {
+    font-size: 16px;
+    padding: 10px 26px;
+    border-radius: 999px;
+  }
+
+  /* ---------- IMAGE ---------- */
+  .banner-img-wrap {
+    margin-top: 10px;
+  }
+
+  .banner-img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: contain;
+  }
+
+  /* ---------- BENEFITS CARD ---------- */
+  .benefits-card {
+    margin-top: -28px; /* attaches card closer to banner */
+    padding: 20px 16px;
+    border-radius: 20px;
+    gap: 18px;
+  }
+
+  .benefit {
+    text-align: center;
+  }
+
+  .benefit img {
+    width: 36px;
+    margin-bottom: 6px;
+  }
+
+  .benefit p {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+}
