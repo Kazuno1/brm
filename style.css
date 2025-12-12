@@ -795,21 +795,6 @@ body {
     margin-top: 36px;
   }
 
-  /* ======================
-     BENEFITS CARD
-     ====================== */
-
-  .benefits-card {
-    grid-template-columns: 1fr;
-    margin-top: -45px;
-    padding: 22px;
-    gap: 20px;
-    border-radius: var(--mobile-radius);
-  }
-
-  .benefit p {
-    font-size: var(--text-size);
-  }
 
   /* ======================
      PRODUCTS SECTION
@@ -920,47 +905,66 @@ body {
 }
 
 /* =====================================================
-   MOBILE — HORIZONTAL BENEFITS (MINIFIED DESKTOP STYLE)
+   MOBILE BANNER — MINIFIED DESKTOP STYLE
    ===================================================== */
 @media (max-width: 768px) {
 
-  /* Benefits container */
+  /* Banner container */
+  .banner-box {
+    padding: 36px 16px 0;
+    border-radius: 22px;
+    height: auto;
+  }
+
+  .banner-box h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+
+  /* CTA button */
+  .banner-btn {
+    font-size: 16px;
+    padding: 10px 26px;
+  }
+
+  /* Model image positioning */
+  .banner-img-wrap {
+    margin-top: 28px;
+  }
+
+  .banner-img {
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: contain;
+  }
+
+  /* ==========================
+     BENEFITS — HORIZONTAL BAR
+     ========================== */
   .benefits-card {
-    display: flex;
-    flex-direction: row;
-    gap: 14px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 18px 16px;
-    margin-top: -28px;
-    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: -36px auto 0;
+    padding: 18px 14px;
+    border-radius: 18px;
+    max-width: 95%;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
   }
 
-  /* Hide scrollbar (clean iOS look) */
-  .benefits-card::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Each benefit item */
   .benefit {
-    flex: 0 0 70%;
-    scroll-snap-align: center;
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 16px 14px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
     text-align: center;
+    padding: 0;
   }
 
-  /* Icons */
   .benefit img {
-    width: 34px;
+    width: 26px;
     margin-bottom: 6px;
   }
 
-  /* Text */
   .benefit p {
-    font-size: 13px;
-    line-height: 1.35;
+    font-size: 12px;
+    line-height: 1.3;
   }
 }
