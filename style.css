@@ -528,7 +528,7 @@ body {
   border: 1px solid rgba(13, 26, 68, 0.04);
   width: 500px;
   /* fixed width */
-  height: 550px;
+  min-height: 550px;
   /* fixed height so content doesn't resize the card */
   height: auto;        /* 👈 allows growth */
   overflow: visible;
@@ -1491,7 +1491,7 @@ body {
 
 @media (max-width: 768px) {
   .pricing-card {
-    min-height: unset;
+    min-height: 410px;
     height: auto;
   }
 }
