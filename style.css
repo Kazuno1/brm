@@ -520,14 +520,14 @@ body {
   display: grid;
   grid-template-columns: 560px 560px;
   /* spacing between the two columns — adjustable via --pricing-gap */
-  gap: var(--pricing-gap, 20px);
+  gap: var(--pricing-gap, 20px);  
   text-align: left;
   align-items: start;
 }
 
 /* === CARD === */
 .pricing-card {
-  background: #ffffff;
+  background: #ffffff8e;
   margin-top: 30px;
   border-radius: 20px;
   padding: 0;
@@ -562,8 +562,8 @@ body {
 
 .card-header .price-main {
   margin-top: 6px;
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 45px;
+  font-weight: 800;
 }
 
 .card-header .price-main span {
@@ -1132,7 +1132,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
 
   .drug-tab {
@@ -1314,14 +1314,14 @@ body {
     align-items: center;
     border: 1.5px solid #7b8fb3;
     border-radius: 12px;
-    padding: 14px 16px;
+    padding: 16px 16px;
     background: #fff;
     cursor: pointer;
     margin-bottom: 8px;
 }
 
 .supply-badge {
-    font-size: 11px;
+    font-size: 15px;
     background: #e8f1ff;
     color: #395a8a;
     padding: 4px 8px;
@@ -1375,145 +1375,236 @@ body {
         padding: 12px 18px;
     }
     .supply-badge {
-        font-size: 8px;
-        padding: 7px 2px;
+        font-size: 10px;
+        margin-left: 5px !important;
+        padding: 4px 3px;
+    }
+    .bundle-pricing-toggle {
+      font-size: 11px !important;
     }
 }
 
-/* =====================================================
-   MOBILE — SHOW MODEL IMAGE UNDER DRUG TABS
-   ===================================================== */
-@media (max-width: 768px) {
-
-  /* Layout order fix */
-  .pricing-layout {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Move image above the pricing card */
-  .model-wrapper {
-    order: 1;
-    display: flex;
-    justify-content: center;
-    margin: 12px 0 18px;
-  }
-
-  /* Pricing card goes below image */
-  .pricing-card {
-    order: 2;
-  }
-
-  /* Image background container */
-  .model-bg {
-    width: 100%;
-    max-width: 320px;
-    height: 220px;
-    border-radius: 18px;
-    padding: 10px;
-    margin: 0 auto;
-  }
-
-  /* Actual image */
-  .model-img {
-    display: block;
-    height: 260px;
-    width: auto;
-    max-width: 100%;
-  }
+/* ===============================
+   PRICING SCREEN BACKGROUND TINT
+   =============================== */
+.pricing-screen {
+  background: linear-gradient(
+    180deg,
+    #ffffffa8 0%,
+    #9fc3d8ad 100%
+  );
+  padding: 80px 16px; 
 }
 
-/* =====================================================
-   MOBILE — CENTER MODEL IMAGE PERFECTLY
-   ===================================================== */
+
+
+/* ===============================  
+   BUNDLE PILL (TOP SECTION)
+   =============================== */
+.bundle-pill {
+  background: linear-gradient(180deg, #8fb3c1, #86a9b8);
+  border-radius: 20px;
+  padding: 24px 22px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.bundle-title {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+/* ===============================
+   STARTING PRICE
+   =============================== */
+.bundle-starting-price {
+  margin-top: 8px;
+  font-size: 15px;
+  opacity: 0.95;
+}
+
+.bundle-starting-price strong {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ===============================
+   SUBTEXT + LINK
+   =============================== */
+.bundle-subtext {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.45;
+  opacity: 0.95;
+}
+
+.bundle-subtext div:first-child {
+  margin-bottom: 4px;
+}
+
+.bundle-link-text {
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ===============================
+   PRICING TOGGLE
+   =============================== */
+.bundle-pricing-toggle {
+  margin-top: 18px;
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #dde8ee;
+  font-size: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+/* ===============================
+   INCLUDES BOX
+   =============================== */
+.bundle-includes-box {
+  margin-top: 16px;
+  padding: 20px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid #e6eef3;
+}
+
+.bundle-includes-box h4 {
+  font-size: 15px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* ===============================
+   GET STARTED BUTTON
+   =============================== */
+.prod-btn {
+  margin-top: 20px;
+  height: 54px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 8px 22px rgba(12, 35, 64, 0.18);
+}
+
+/* ===============================
+   CENTER PRICING CARD
+   =============================== */
+.pricing-layout {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.pricing-card {
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* ===============================
+   REMOVE MODEL IMAGE (ALL SCREENS)
+   =============================== */
+.model-wrapper,
+.model-bg,
+.model-img {
+  display: none !important;
+}
+
+.bundle-pill {
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: #87a9b8; /* same pill color */
+  color: #fff;
+  text-align: center;
+}
+
+.bundle-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.bundle-starting-price {
+  margin-top: 6px;
+  font-size: 15px;
+}
+
+.bundle-subtext {
+  margin-top: 6px;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+.bundle-link-text {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* ===============================
+   BUNDLE PILL – MOBILE VIEW
+   =============================== */
 @media (max-width: 768px) {
 
-  /* Ensure column layout */
-  .pricing-layout {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* 👈 center children */
+  .bundle-pill {
+    padding: 16px 14px;
+    border-radius: 14px;
+    text-align: center;
   }
 
-  /* Center wrapper */
-  .model-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 14px 0 18px;
+  .bundle-title {
+    font-size: 18px;
+    line-height: 1.25;
   }
 
-  /* Center background */
-  .model-bg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 320px;
-    height: 220px;
-    border-radius: 18px;
-    padding: 10px;
+  .bundle-starting-price {
+    margin-top: 4px;
+    font-size: 14px;
   }
 
-  /* Center image itself */
-  .model-img {
-    display: block;
-    margin: 0 auto;
-    height: 260px;
-    max-width: 100%;
-    object-fit: contain;
+  .bundle-subtext {
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .bundle-link-text {
+    font-size: 13px;
+  }
+    .pricing-cards {
+    height: auto !important;
   }
 }
 
 /* ===============================
-   MONTHLY — MODEL IMAGE
+   FIX PRICING CARD HEIGHT ON MOBILE
    =============================== */
-.mode-monthly .model-bg {
-  max-width: 590px;
-  height: 400px;
-}
-
-.mode-monthly .model-img {
-  height: 600px;
-}
-
-/* ===============================
-   BUNDLE — MODEL IMAGE
-   =============================== */
-.mode-bundle .model-bg {
-  max-width: 650px;
-  height: 420px;
-}
-
-.mode-bundle .model-img {
-  height: 520px;
-}
-
 @media (max-width: 768px) {
-  .banner-box {
-    height: auto;
-    padding: 28px 16px 12px;
-  }
 
-  .banner-img {
-    max-height: 180px;
-  }
-}
-
-@media (max-width: 768px) {
+  /* Allow card to grow naturally */
   .pricing-card {
-    min-height: 410px;
-    height: auto;
+    height: auto !important;
+    min-height: unset !important;
+    overflow: visible !important;
+  }
+
+  /* Let body expand with content */
+  .card-body {
+    padding-bottom: 16px !important;
+  }
+
+  /* Footer should NOT be absolute on mobile */
+  .card-footer {
+    position: relative !important;
+    bottom: auto !important;
+    margin-top: 16px;
+    padding-bottom: 0;
   }
 }
 
-/* Hide model image on mobile */
-@media (max-width: 768px) {
-  .model-wrapper,
-  .model-bg,
-  .model-img {
-    display: none !important;
-  }
-}
+
+

@@ -208,7 +208,7 @@
             <!-- TITLE -->
             <h2 class="pricing-title">Our Pricing Plans</h2>
             <p class="pricing-subtitle">
-                Simple and Transparent. Choose the plan that fits you best
+                Simple and transparent pricing. Choose the plan that works for you.
             </p>
 
             <!-- BILLING TOGGLE -->
@@ -268,12 +268,12 @@
                     image: "https://blueridgemeds.com/wp-content/uploads/2025/12/g1.png",
                     link: "https://blueridgemeds.com/get-started/?item=tirze-1",
                     features: [
-                        "Includes All Doses",
-                        "Once weekly injections",
-                        "Doctor’s visits included",
-                        "Unlimited provider support",
-                        "Same price regardless of dosage",
-                        "Pause or cancel your membership anytime"
+
+                        "All prescribed doses included",
+                        "Once-weekly injections, shipped directly to you",
+                        "Ongoing support and guidance from your provider ",
+                        "One consistent monthly price, regardless of dosage",
+                        "Pause or cancel anytime",
                     ]
                 },
                 semaglutide: {
@@ -283,12 +283,12 @@
                     image: "https://blueridgemeds.com/wp-content/uploads/2025/12/g2.png",
                     link: "https://blueridgemeds.com/get-started/?item=semag-1",
                     features: [
-                        "Includes All Doses",
-                        "Once weekly injections",
-                        "Doctor’s visits included",
-                        "Unlimited provider support",
-                        "Same price regardless of dosage",
-                        "Pause or cancel your membership anytime"
+
+                        "All prescribed doses included",
+                        "Once-weekly injections, shipped directly to you",
+                        "Ongoing support and guidance from your provider ",
+                        "One consistent monthly price, regardless of dosage",
+                        "Pause or cancel anytime",
                     ]
                 },
                 oral_tirzepatide: {
@@ -298,11 +298,12 @@
                     image: "https://blueridgemeds.com/wp-content/uploads/2025/12/g1.png",
                     link: "https://blueridgemeds.com/get-started/?item=oraltirze",
                     features: [
-                        "Includes All Doses",
-                        "Unlimited provider support",
-                        "Doctor’s visits included",
-                        "Same price regardless of dosage",
-                        "Pause or cancel anytime"
+
+                        "All prescribed doses included",
+                        "Once-weekly injections, shipped directly to you",
+                        "Ongoing support and guidance from your provider ",
+                        "One consistent monthly price, regardless of dosage",
+                        "Pause or cancel anytime",
                     ]
                 },
                 oral_semaglutide: {
@@ -312,11 +313,12 @@
                     image: "https://blueridgemeds.com/wp-content/uploads/2025/12/g2.png",
                     link: "https://blueridgemeds.com/get-started/?item=oral",
                     features: [
-                        "Includes All Doses",
-                        "Unlimited provider support",
-                        "Doctor’s visits included",
-                        "Same price regardless of dosage",
-                        "Pause or cancel anytime"
+
+                        "All prescribed doses included",
+                        "Once-weekly injections, shipped directly to you",
+                        "Ongoing support and guidance from your provider ",
+                        "One consistent monthly price, regardless of dosage",
+                        "Pause or cancel anytime",
                     ]
                 }
             },
@@ -330,12 +332,11 @@
                     image: "https://blueridgemeds.com/wp-content/uploads/2025/12/Group-251-2-1.png",
                     link: "https://blueridgemeds.com/get-started/",
                     features: [
-                        "Personalized medication dosing",
-                        "Once-weekly injections",
-                        "Direct access to your provider",
-                        "Clinically guided treatment",
-                        "Your cost never increases — even if your dose does",
-                        "No payment until treatment approval and your prescription ships"
+                        "		Personalized dosing based on your treatment plan",
+                        "		Once-weekly injections",
+                        "		Initial evaluation and follow-up care",
+                        "		Ongoing support from your medical team",
+                        "		Pause or cancel anytime"
                     ],
                     pricing: [
                         { label: "MONTH 1 – MONTH 3", dose: "2.2MG, 4.4MG, 6.6MG", price: "$749" },
@@ -355,12 +356,11 @@
                     image: "https://blueridgemeds.com/wp-content/uploads/2025/12/Group-250-2-1.png",
                     link: "https://blueridgemeds.com/get-started/",
                     features: [
-                        "Personalized medication dosing",
-                        "Once-weekly injections",
-                        "Direct access to your provider",
-                        "Clinically guided treatment",
-                        "Your cost never increases — even if your dose does",
-                        "No payment until treatment approval and your prescription ships"
+                        "		Personalized dosing based on your treatment plan",
+                        "		Once-weekly injections",
+                        "		Initial evaluation and follow-up care",
+                        "		Ongoing support from your medical team",
+                        "		Pause or cancel anytime"
                     ],
                     pricing: [
                         { label: "MONTH 1 – MONTH 3", dose: "0.22MG, 0.44MG, 0.89MG", price: "$499" },
@@ -434,38 +434,57 @@
             const isBundle = currentBilling === "bundle";
 
             if (isBundle) {
+
+                // dynamic lowest price
+                const startingPrice = d.pricing
+                    .map(p => parseInt(p.price.replace("$", ""), 10))
+                    .sort((a, b) => a - b)[0];
+
                 card.innerHTML = `
-                <div class="bundle-pill">${d.name}</div>
+        <!-- BUNDLE PILL CONTAINER -->
+        <div class="bundle-pill">
+            <div class="bundle-title">${d.name}</div>
 
-                <button class="bundle-pricing-toggle" onclick="togglePricing(this)">
-                    <span>Pricing</span>
-                    <span class="supply-badge"> DISCOUNTED 3 MONTH SUPPLY WHEN PAID UPFRONT</span>
-                    <span class="icon">+</span>
-                </button>
+            <div class="bundle-starting-price">
+               <em> Starting at </em><strong>$${startingPrice}</strong>
+            </div>
 
-                <div class="bundle-pricing-content">
-                    ${d.pricing.map(row => `
-                        <div class="price-row">
-                            <div>
-                                <strong>${row.label}</strong>
-                                <div class="dose">${row.dose}</div>
-                            </div>
-                            <div class="amount">${row.price}</div>
-                        </div>
-                    `).join("")}
+            <div class="bundle-subtext">
+                <div>3-month supply, paid upfront.</div>
+                <div></div>
+            </div>
+        </div>
+
+        <button class="bundle-pricing-toggle" onclick="togglePricing(this)">
+            <span>Pricing</span>
+            <span class="supply-badge"> View full pricing & dosage options → Click Here!</span>
+            <span class="icon">+</span>
+        </button>
+
+        <div class="bundle-pricing-content">
+            ${d.pricing.map(row => `
+                <div class="price-row">
+                    <div>
+                        <strong>${row.label}</strong>
+                        <div class="dose">${row.dose}</div>
+                    </div>
+                    <div class="amount">${row.price}</div>
                 </div>
+            `).join("")}
+        </div>
 
-                <div class="bundle-includes-box">
-                    <h4>Includes:</h4>
-                    <ul class="feature-list">
-                        ${d.features.map(f => `<li>${f}</li>`).join("")}
-                    </ul>
-                </div>
+        <div class="bundle-includes-box">
+            <h4>Includes:</h4>
+            <ul class="feature-list">
+                ${d.features.map(f => `<li>${f}</li>`).join("")}
+            </ul>
+        </div>
 
-                <button class="btn-primary prod-btn" onclick="location.href='${d.link}'">
-                    Get Started
-                </button>
-            `;
+        <button class="btn-primary prod-btn" onclick="location.href='${d.link}'">
+            Get Started
+        </button>
+    `;
+
             } else {
                 card.innerHTML = `
                 <div class="card-header">
