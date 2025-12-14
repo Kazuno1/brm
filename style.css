@@ -1415,13 +1415,13 @@ body {
   }
 
   .supply-badge {
-    font-size: 10px;
+    font-size: 12px;
     margin-left: 5px !important;
     padding: 4px 3px;
   }
 
   .bundle-pricing-toggle {
-    font-size: 11px !important;
+    font-size: 12px !important;
   }
 }
 
