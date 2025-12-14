@@ -530,8 +530,10 @@ body {
   /* fixed width */
   height: 550px;
   /* fixed height so content doesn't resize the card */
+  height: auto;        /* 👈 allows growth */
   overflow: visible;
   position: relative; /* allow absolutely positioned footer */
+  overflow: hidden;    /* 👈 keeps content inside */
   display: flex;
   flex-direction: column;
 }
@@ -1195,11 +1197,6 @@ body {
   }
 } 
 
-/* =====================================================
-   MOBILE — REMOVE MODEL IMAGE COMPLETELY
-   ===================================================== */
-
-
 /* ===== BUNDLE CARD ONLY ===== */
 .bundle-card {
     background: #fff;
@@ -1355,6 +1352,21 @@ body {
     display: none;
 }
 
+@media (max-width: 768px) {
+    .bundle-card {
+        padding: 18px;
+    }
+
+    .bundle-pill {
+        font-size: 20px;
+        padding: 12px 18px;
+    }
+    .supply-badge {
+        font-size: 8px;
+        padding: 7px 2px;
+    }
+}
+
 /* =====================================================
    MOBILE — SHOW MODEL IMAGE UNDER DRUG TABS
    ===================================================== */
@@ -1474,5 +1486,12 @@ body {
 
   .banner-img {
     max-height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-card {
+    min-height: unset;
+    height: auto;
   }
 }
