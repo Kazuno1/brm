@@ -94,23 +94,26 @@ body {
 }
 
 .hero-title {
-    font-size: 45px;
-    font-weight: 700;
-    line-height: 1.25;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 1.25;
 }
 
 /* FIXED HEIGHT so layout NEVER shifts */
-#line1, #line2 {
-    display: inline-block;
-    min-height: 1.3rem; /* locks the height */
-    white-space: nowrap;
+#line1,
+#line2 {
+  display: inline-block;
+  min-height: 1.3rem;
+  /* locks the height */
+  white-space: nowrap;
 }
-#line1{
+
+#line1 {
   color: #242949;
 }
 
 #line2 {
-    color: #5b7095;
+  color: #5b7095;
 }
 
 .cursor {
@@ -121,8 +124,16 @@ body {
 }
 
 @keyframes blink {
-  0%, 50% { opacity: 1; }
-  50.1%, 100% { opacity: 0; }
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  50.1%,
+  100% {
+    opacity: 0;
+  }
 }
 
 
@@ -337,7 +348,7 @@ body {
 }
 
 .products-title {
-  font-family: Poppins, sans-serif ;
+  font-family: Poppins, sans-serif;
   font-size: 43px;
   font-weight: 500;
   color: #78bfb7;
@@ -492,7 +503,8 @@ body {
 }
 
 .drug-tab {
-  padding: 12px 22px; /* bigger clickable area */
+  padding: 12px 22px;
+  /* bigger clickable area */
   border-radius: 12px;
   border: 1px solid #d8e1ec;
   cursor: pointer;
@@ -500,7 +512,7 @@ body {
   background: #ffffff;
   color: #0b2148;
   transition: all 180ms ease;
-  box-shadow: 0 2px 6px rgba(12,34,60,0.04);
+  box-shadow: 0 2px 6px rgba(12, 34, 60, 0.04);
 }
 
 .drug-tab:hover {
@@ -508,10 +520,10 @@ body {
 }
 
 .drug-tab.active {
-  background: linear-gradient(90deg,#afd1cc 0%, #4a7fb8 100%);
+  background: linear-gradient(90deg, #afd1cc 0%, #4a7fb8 100%);
   color: #ffffff;
   border-color: transparent;
-  box-shadow: 0 6px 18px rgba(74,127,184,0.12);
+  box-shadow: 0 6px 18px rgba(74, 127, 184, 0.12);
 }
 
 /* LAYOUT */
@@ -520,7 +532,7 @@ body {
   display: grid;
   grid-template-columns: 560px 560px;
   /* spacing between the two columns — adjustable via --pricing-gap */
-  gap: var(--pricing-gap, 20px);  
+  gap: var(--pricing-gap, 20px);
   text-align: left;
   align-items: start;
 }
@@ -538,10 +550,13 @@ body {
   /* fixed width */
   min-height: 550px;
   /* fixed height so content doesn't resize the card */
-  height: auto;        /* 👈 allows growth */
+  height: auto;
+  /* 👈 allows growth */
   overflow: visible;
-  position: relative; /* allow absolutely positioned footer */
-  overflow: hidden;    /* 👈 keeps content inside */
+  position: relative;
+  /* allow absolutely positioned footer */
+  overflow: hidden;
+  /* 👈 keeps content inside */
   display: flex;
   flex-direction: column;
 }
@@ -573,8 +588,10 @@ body {
 
 /* BODY */
 .card-body {
-  padding: 22px 30px 90px; /* leave space at bottom for the absolute footer */
-  overflow: visible; /* do not scroll */
+  padding: 22px 30px 90px;
+  /* leave space at bottom for the absolute footer */
+  overflow: visible;
+  /* do not scroll */
   flex: 1 1 auto;
 }
 
@@ -625,7 +642,7 @@ body {
   background: #ffffff;
   border-radius: 22px;
   padding: 22px 18px 24px;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
   border: 3px solid #e4eef0;
   text-align: center;
 }
@@ -689,7 +706,8 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 18px; /* fixed distance from bottom of the card */
+  bottom: 18px;
+  /* fixed distance from bottom of the card */
   padding: 0 30px;
   background: transparent;
   display: flex;
@@ -699,14 +717,30 @@ body {
 }
 
 /* Quick utility classes to force alignment without editing variables */
-.card-footer.cta-left { justify-content: flex-start; }
-.card-footer.cta-center { justify-content: center; }
-.card-footer.cta-right { justify-content: flex-end; }
+.card-footer.cta-left {
+  justify-content: flex-start;
+}
+
+.card-footer.cta-center {
+  justify-content: center;
+}
+
+.card-footer.cta-right {
+  justify-content: flex-end;
+}
 
 /* Also allow setting alignment by adding class on the card container */
-.pricing-card.cta-left { --cta-justify: flex-start; }
-.pricing-card.cta-center { --cta-justify: center; }
-.pricing-card.cta-right { --cta-justify: flex-end; }
+.pricing-card.cta-left {
+  --cta-justify: flex-start;
+}
+
+.pricing-card.cta-center {
+  --cta-justify: center;
+}
+
+.pricing-card.cta-right {
+  --cta-justify: flex-end;
+}
 
 /* === RIGHT IMAGE PLACEHOLDER === */
 /* MODEL IMAGE CONTAINER */
@@ -721,11 +755,10 @@ body {
   width: 600px;
   height: 400px;
   background: linear-gradient(180deg,
-    #7690ad 0%,
-    #afc0cf 35%,
-    #c7e0ec 70%,
-    #e6e8ee 100%
-  );
+      #7690ad 0%,
+      #afc0cf 35%,
+      #c7e0ec 70%,
+      #e6e8ee 100%);
   border-radius: 28px;
   display: flex;
   justify-content: center;
@@ -784,7 +817,8 @@ body {
      ====================== */
 
   .menu {
-    display: none; /* hide desktop nav */
+    display: none;
+    /* hide desktop nav */
   }
 
   .nav-buttons {
@@ -838,43 +872,47 @@ body {
     font-size: var(--btn-font);
     padding: 12px 0;
   }
-  .btn-outline-lg{
+
+  .btn-outline-lg {
     margin-bottom: 5px import;
   }
-  
+
   /* ======================
    HERO TITLE – TIGHTEN MOBILE SPACING
    ====================== */
 
-/* Remove any forced spacing */
-.hero-title {
-  line-height: 1.1;
-  margin-bottom: 6px;
-}
+  /* Remove any forced spacing */
+  .hero-title {
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
 
-/* Line 1 */
-#line1 {
-  margin-bottom: 2px !important; /* 👈 tighter */
-  line-height: 1.05;
-}
+  /* Line 1 */
+  #line1 {
+    margin-bottom: 2px !important;
+    /* 👈 tighter */
+    line-height: 1.05;
+  }
 
-/* Line 2 */
-#line2 {
-  margin-top: 0 !important;      /* 👈 pull it closer */
-  line-height: 1.05;
-  padding-top: 0;
-}
+  /* Line 2 */
+  #line2 {
+    margin-top: 0 !important;
+    /* 👈 pull it closer */
+    line-height: 1.05;
+    padding-top: 0;
+  }
 
-/* Subtitle under the typing line */
-.subtitle {
-  margin-top: 6px !important;    /* reduce gap below */
-  line-height: 1.35;
-}
+  /* Subtitle under the typing line */
+  .subtitle {
+    margin-top: 6px !important;
+    /* reduce gap below */
+    line-height: 1.35;
+  }
 
-/* Remove spacing caused by <br> */
-.hero-title br {
-  display: none;
-}
+  /* Remove spacing caused by <br> */
+  .hero-title br {
+    display: none;
+  }
 
 
   /* ❌ REMOVE HERO RIGHT TEXT ON MOBILE */
@@ -887,7 +925,7 @@ body {
      ====================== */
 
   .banner-box {
-    height: 500px;
+    height: 400px;
     padding: 36px 18px 0;
     border-radius: var(--mobile-radius);
   }
@@ -903,7 +941,7 @@ body {
   }
 
   .floating-btn {
-    top: 130px;
+    top: 150px;
   }
 
   .banner-btn {
@@ -912,7 +950,7 @@ body {
   }
 
   .banner-img {
-    width: 500px !important;
+    width: 550px !important;
     height: 270px !important;
     margin-top: 20px;
   }
@@ -1071,8 +1109,8 @@ body {
     margin: -40px auto 0;
     padding: 18px 14px;
     border-radius: 18px;
-    max-width: 95%;
-    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    max-width: 90%;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
   }
 
   .benefit {
@@ -1208,192 +1246,193 @@ body {
     height: 48px;
     font-size: 16px;
   }
-} 
+}
 
 /* ===== BUNDLE CARD ONLY ===== */
 .bundle-card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 24px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
 }
 
 .bundle-title {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 
 .pricing-row {
-    width: 100%;
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    padding: 10px 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: #f8fafc;
-    cursor: pointer;
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  cursor: pointer;
 }
 
 .supply-pill {
-    font-size: 11px;
-    background: #e6eef7;
-    color: #375a8c;
-    padding: 2px 8px;
-    border-radius: 999px;
+  font-size: 11px;
+  background: #e6eef7;
+  color: #375a8c;
+  padding: 2px 8px;
+  border-radius: 999px;
 }
 
 .pricing-row .icon {
-    margin-left: auto;
-    font-size: 18px;
+  margin-left: auto;
+  font-size: 18px;
 }
 
 .pricing-hidden {
-    display: none;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    margin-top: 10px;
-    padding: 10px 14px;
+  display: none;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 10px 14px;
 }
 
 .pricing-hidden.open {
-    display: block;
+  display: block;
 }
 
 .price-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .price-row:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .price-row .dose {
-    font-size: 12px;
-    color: #64748b;
+  font-size: 12px;
+  color: #64748b;
 }
 
 .prod-btn.full {
-    width: 100%;
-    margin-top: 16px;
-    margin-bottom: 40px !important;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 40px !important;
 }
 
 /* ===== BUNDLE UI ===== */
 
 .bundle-pill {
-    background: linear-gradient(135deg, #9bbfc1, #6f8fa6);
-    color: #fff;
-    font-size: 22px;
-    font-weight: 600;
-    padding: 16px 22px;
-    border-radius: 16px;
-    margin-bottom: 18px;
+  background: linear-gradient(135deg, #9bbfc1, #6f8fa6);
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 16px 22px;
+  border-radius: 16px;
+  margin-bottom: 18px;
 }
 
 .bundle-includes-box {
-    border: 1.5px solid #7b8fb3;
-    border-radius: 14px;
-    padding: 18px 20px;
-    margin-bottom: 16px;
-    background: #fff;
+  border: 1.5px solid #7b8fb3;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+  background: #fff;
 }
 
 .bundle-includes-box h4 {
-    margin-bottom: 10px;
-    font-weight: 600;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .bundle-pricing-toggle {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1.5px solid #7b8fb3;
-    border-radius: 12px;
-    padding: 16px 16px;
-    background: #fff;
-    cursor: pointer;
-    margin-bottom: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.5px solid #7b8fb3;
+  border-radius: 12px;
+  padding: 16px 16px;
+  background: #fff;
+  cursor: pointer;
+  margin-bottom: 8px;
 }
 
 .supply-badge {
-    font-size: 15px;
-    background: #e8f1ff;
-    color: #395a8a;
-    padding: 4px 8px;
-    border-radius: 6px;
-    margin-left: auto;
-    margin-right: 10px;
+  font-size: 15px;
+  background: #e8f1ff;
+  color: #395a8a;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin-left: auto;
+  margin-right: 10px;
 }
 
 .bundle-pricing-content {
-    display: none;
-    border: 1.5px solid #7b8fb3;
-    border-radius: 12px;
-    padding: 12px 14px;
-    margin-bottom: 16px;
+  display: none;
+  border: 1.5px solid #7b8fb3;
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
 }
 
 .bundle-pricing-content.open {
-    display: block;
+  display: block;
 }
 
 .price-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .price-row:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .price-row .dose {
-    font-size: 12px;
-    color: #6b7280;
+  font-size: 12px;
+  color: #6b7280;
 }
 
 .price-row .amount {
-    font-weight: 600;
+  font-weight: 600;
 }
+
 .bundle-pricing-content {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 768px) {
-    .bundle-card {
-        padding: 18px;
-    }
+  .bundle-card {
+    padding: 18px;
+  }
 
-    .bundle-pill {
-        font-size: 20px;
-        padding: 12px 18px;
-    }
-    .supply-badge {
-        font-size: 10px;
-        margin-left: 5px !important;
-        padding: 4px 3px;
-    }
-    .bundle-pricing-toggle {
-      font-size: 11px !important;
-    }
+  .bundle-pill {
+    font-size: 20px;
+    padding: 12px 18px;
+  }
+
+  .supply-badge {
+    font-size: 10px;
+    margin-left: 5px !important;
+    padding: 4px 3px;
+  }
+
+  .bundle-pricing-toggle {
+    font-size: 11px !important;
+  }
 }
 
 /* ===============================
    PRICING SCREEN BACKGROUND TINT
    =============================== */
 .pricing-screen {
-  background: linear-gradient(
-    180deg,
-    #ffffffa8 0%,
-    #9fc3d8ad 100%
-  );
-  padding: 80px 16px; 
+  background: linear-gradient(180deg,
+      #ffffffa8 0%,
+      #9fc3d8ad 100%);
+  padding: 80px 16px;
 }
 
 
@@ -1519,7 +1558,8 @@ body {
 .bundle-pill {
   padding: 18px 20px;
   border-radius: 16px;
-  background: #87a9b8; /* same pill color */
+  background: #87a9b8;
+  /* same pill color */
   color: #fff;
   text-align: center;
 }
@@ -1575,7 +1615,8 @@ body {
   .bundle-link-text {
     font-size: 13px;
   }
-    .pricing-cards {
+
+  .pricing-cards {
     height: auto !important;
   }
 }
@@ -1606,5 +1647,96 @@ body {
   }
 }
 
+/* ===============================
+   MOBILE BANNER BOX FIX
+   =============================== */
+@media (max-width: 768px) {
 
+  .banner-box {
+    height: auto !important;          /* 🔑 remove fixed height */
+    min-height: unset !important;
+    padding: 28px 16px 24px;           /* tighter vertical spacing */
+    border-radius: 18px;
+  }
 
+  .banner-btn {
+    font-size: 16px;
+    padding: 12px 28px;
+  }
+
+  .banner-img-wrap {
+    margin-top: 16px;
+  }
+
+  .banner-img {
+    width: 130% !important;
+    height: auto !important;
+    max-height: 260px;
+    object-fit: contain;
+  }
+}
+
+/* ===============================
+   MOBILE PRODUCT CARD SIZE FIX
+   =============================== */
+@media (max-width: 768px) {
+
+  /* Section container tighter */
+  .products-container {
+    padding: 0 12px;
+  }
+
+  /* 1 card per line (already 1fr, but enforce clean spacing) */
+  .products-cards {
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+  }
+
+  /* Card sizing */
+  .product-card {
+    max-width: 320px;        /* 🔑 controls card width */
+
+    margin: 0 auto;          /* center card */
+    padding: 14px 14px 16px; /* tighter padding */
+    border-radius: 16px;
+  }
+
+  /* Image smaller */
+  .product-img {
+    max-width: 220px;
+    margin-bottom: 8px;
+  }
+
+  /* Title */
+  .product-card h3 {
+    font-size: 16px;
+    margin-top: 4px;
+  }
+
+  /* Price badge */
+  .price {
+    font-size: 12px;
+    padding: 3px 0;
+    margin-bottom: 6px;
+  }
+
+  /* Description tighter */
+  .desc {
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 6px 0 10px;
+  }
+
+  /* CTA buttons */
+  .prod-btn {
+    font-size: 14px;
+    padding: 0px 0;
+    border-radius: 26px;
+    margin-bottom: 10px;
+  }
+
+  .btn-outline-sm {
+    font-size: 12px;
+    padding: 7px 0;
+  }
+}
