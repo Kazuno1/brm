@@ -286,7 +286,7 @@ body {
 }
 
 .banner-img {
-  width: 80%;
+  width: 70%;
   height: auto;
   /* forces same height for all images */
   object-fit: contain;
@@ -303,7 +303,7 @@ body {
 .benefits-card {
   background: #FAF7F2;
   max-width: 810px;
-  margin: -60px auto 0;
+  margin: -50px auto 0;
   border-radius: 26px;
   padding: 16px 13px;
   display: grid;
