@@ -78,16 +78,35 @@ body {
 }
 
 .hero-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 60px;
+  display: flex;
+  justify-content: center;
 }
+
+.hero-left {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
 
 .hero-left h1 {
   font-size: 45px;
   font-weight: 700;
   line-height: 1.25;
 }
+
+.hero-title,
+#line1,
+#line2 {
+  text-align: left !important;
+}
+
 
 .hero-left h1 span {
   color: #1d4ed8;
@@ -99,14 +118,40 @@ body {
   line-height: 1.25;
 }
 
+.hero-title {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0;               /* 🔑 kill flex gap */
+  white-space: nowrap;
+  text-align: left;
+}
+
+#line1,
+#line2 {
+  margin: 0;
+  padding: 0;
+}
+
+#line2 {
+  margin-left: -20px;     /* 👈 perfect comma spacing */
+}
+
+
+.hero-title {
+  gap: 0 !important;
+}
+
 /* FIXED HEIGHT so layout NEVER shifts */
 #line1,
 #line2 {
   display: inline-block;
-  min-height: 1.3rem;
-  /* locks the height */
+  text-align: left;
   white-space: nowrap;
+
+  /* 🔑 CRITICAL FIX */
+  min-width: 520px;   /* adjust to your longest phrase */
 }
+
 
 #line1 {
   color: #242949;
@@ -138,8 +183,8 @@ body {
 
 
 .subtitle {
-  margin-top: 12px;
   font-size: 15px;
+  text-align: center;
   color: #606676;
 }
 
@@ -169,16 +214,6 @@ body {
   cursor: pointer;
 }
 
-/* HERO RIGHT */
-.hero-right {
-  border-left: 1px solid #d9dce3;
-  padding-left: 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-  font-size: 13px;
-  color: #646b78;
-}
 
 /* BANNER SECTION */
 .banner {
@@ -204,7 +239,7 @@ body {
   font-size: 42px;
   margin-top: 15px;
   font-weight: 700;
-  color: #292727;
+  color: #242949;
   margin-bottom: 0px;
 }
 
@@ -212,7 +247,7 @@ body {
   font-size: 17px;
   margin-top: 12px;
   font-weight: 500;
-  color: #333333;
+  color: #666464;
   margin-bottom: 20px;
 }
 
@@ -262,11 +297,11 @@ body {
 
 /* BENEFITS CARD */
 .benefits-card {
-  background: white;
+  background: #FFFFF0;
   max-width: 900px;
   margin: -70px auto 0;
   border-radius: 26px;
-  padding: 32px 20px;
+  padding: 25px 18px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
@@ -283,7 +318,7 @@ body {
 }
 
 .icon {
-  width: 50px;
+  width: 45px;
   margin-bottom: 10px;
 }
 
@@ -311,12 +346,6 @@ body {
 @media (max-width: 900px) {
   .hero-grid {
     grid-template-columns: 1fr;
-  }
-
-  .hero-right {
-    border-left: none;
-    padding-left: 0;
-    margin-top: 20px;
   }
 
   .benefits-card {
@@ -583,7 +612,8 @@ body {
 
 .card-header .price-main span {
   font-size: 19px;
-  opacity: 0.9;
+  font-style: italic;
+  font-weight: 500;
 }
 
 /* BODY */
@@ -602,6 +632,7 @@ body {
 }
 
 .feature-list li {
+  font-style: italic !important;
   margin-bottom: 23px;
   font-size: 20px;
   padding-left: 20px;
@@ -915,11 +946,6 @@ body {
   }
 
 
-  /* ❌ REMOVE HERO RIGHT TEXT ON MOBILE */
-  .hero-right {
-    display: none;
-  }
-
   /* ======================
      BANNER SECTION
      ====================== */
@@ -1107,7 +1133,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     margin: -40px auto 0;
-    padding: 18px 14px;
+    padding: 14px 10px;
     border-radius: 18px;
     max-width: 90%;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
@@ -1119,8 +1145,8 @@ body {
   }
 
   .benefit img {
-    width: 26px;
-    margin-bottom: 6px;
+    width: 20px;
+    margin-bottom: 4px;
   }
 
   .benefit p {
@@ -1223,6 +1249,7 @@ body {
 
   .feature-list li {
     font-size: 14px;
+    font-style: italic !important;
     margin-bottom: 10px;
     line-height: 1.4;
     padding-left: 18px;
@@ -1739,4 +1766,29 @@ body {
     font-size: 12px;
     padding: 7px 0;
   }
+}
+
+@media (max-width: 768px) {
+
+  /* Allow text to fit screen */
+  #line1,
+  #line2 {
+    font-size: 30px !important;
+    min-width: unset !important;   /* 🔑 remove desktop lock */
+    max-width: 100%;
+    white-space: normal;           /* allow wrapping */
+    text-align: center;
+    margin-left: auto !important;
+  }
+
+  /* Center hero text safely on mobile */
+  .hero-title {
+    text-align: center;
+  }
+
+  /* Prevent horizontal overflow */
+  .hero {
+    overflow-x: hidden;
+  }
+
 }
