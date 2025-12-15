@@ -243,6 +243,10 @@ body {
   margin-bottom: 0px;
 }
 
+.banner-box h2 .highlight1 {
+  color: #5b7095;
+}
+
 .banner-box h3 {
   font-size: 17px;
   margin-top: 12px;
