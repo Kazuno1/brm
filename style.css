@@ -1,1821 +1,1456 @@
 /* GLOBAL */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-
 body {
-  font-family: "Inter", sans-serif;
-  background: #f4f6fa;
-  color: #1e1e1e;
+	font-family: "Inter", sans-serif;
+	background: #f4f6fa;
+	color: #1e1e1e;
 }
-
 .container {
-  max-width: 1180px;
-  margin: auto;
-  padding: 0 20px;
+	max-width: 1180px;
+	margin: auto;
+	padding: 0 20px;
 }
-
 /* NAVIGATION */
 .nav {
-  background: #fff;
-  border-bottom: 1px solid #e6e6e6;
-  padding: 18px 0;
+	background: #fff;
+	border-bottom: 1px solid #e6e6e6;
+	padding: 18px 0;
 }
-
 .nav-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
-
 .logo {
-  width: 42px;
-  height: 42px;
-  background: #0d1a44;
-  border-radius: 50%;
+	width: 42px;
+	height: 42px;
+	background: #0d1a44;
+	border-radius: 50%;
 }
-
 .menu {
-  display: flex;
-  gap: 32px;
-  font-size: 14px;
+	display: flex;
+	gap: 32px;
+	font-size: 14px;
 }
-
 .menu a {
-  cursor: pointer;
+	cursor: pointer;
 }
-
 .nav-buttons {
-  display: flex;
-  gap: 12px;
+	display: flex;
+	gap: 12px;
 }
-
 .btn-primary {
-  background: #0d1a44;
-  padding: 10px 22px;
-  border-radius: 40px;
-  border: none;
-  color: #fff;
-  font-size: 14px;
-  cursor: pointer;
+	background: #0d1a44;
+	padding: 10px 22px;
+	border-radius: 40px;
+	border: none;
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
 }
-
 .btn-outline {
-  background: #fff;
-  padding: 10px 22px;
-  border-radius: 40px;
-  border: 1px solid #b1b8c9;
-  font-size: 14px;
-  cursor: pointer;
+	background: #fff;
+	padding: 10px 22px;
+	border-radius: 40px;
+	border: 1px solid #b1b8c9;
+	font-size: 14px;
+	cursor: pointer;
 }
-
 /* HERO */
 .hero {
-  padding-top: 50px;
-  padding-bottom: 40px;
+	padding-top: 50px;
+	padding-bottom: 40px;
 }
-
 .hero-grid {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
-
 .hero-left {
-  max-width: 1100px;
-  margin: 0 auto;
+	max-width: 1100px;
+	margin: 0 auto;
 }
-
 .hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 28px;
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+	margin-top: 28px;
 }
-
-
 .hero-left h1 {
-  font-size: 45px;
-  font-weight: 700;
-  line-height: 1.25;
+	font-size: 45px;
+	font-weight: 700;
+	line-height: 1.25;
 }
-
-.hero-title,
-#line1,
-#line2 {
-  text-align: left !important;
+.hero-title,#line1,#line2 {
+	text-align: left !important;
 }
-
-
 .hero-left h1 span {
-  color: #1d4ed8;
+	color: #1d4ed8;
 }
-
 .hero-title {
-  font-size: 45px;
-  font-weight: 700;
-  line-height: 1.25;
+	font-size: 45px;
+	font-weight: 700;
+	line-height: 1.25;
 }
-
 .hero-title {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0;
-  /* 🔑 kill flex gap */
-  white-space: nowrap;
-  text-align: left;
+	display: inline-flex;
+	align-items: baseline;
+	gap: 0;
+	/* 🔑 kill flex gap */
+	white-space: nowrap;
+	text-align: left;
 }
-
-#line1,
+#line1,#line2 {
+	margin: 0;
+	padding: 0;
+}
 #line2 {
-  margin: 0;
-  padding: 0;
+	margin-left: -20px;
+	/* 👈 perfect comma spacing */
 }
-
-#line2 {
-  margin-left: -20px;
-  /* 👈 perfect comma spacing */
-}
-
-
 .hero-title {
-  gap: 0 !important;
+	gap: 0 !important;
 }
-
 /* FIXED HEIGHT so layout NEVER shifts */
-#line1,
-#line2 {
-  display: inline-block;
-  text-align: left;
-  white-space: nowrap;
-
-  /* 🔑 CRITICAL FIX */
-  min-width: 520px;
-  /* adjust to your longest phrase */
+#line1,#line2 {
+	display: inline-block;
+	text-align: left;
+	white-space: nowrap;
+	/* 🔑 CRITICAL FIX */
+	min-width: 520px;
+	/* adjust to your longest phrase */
 }
-
-
 #line1 {
-  color: #242949;
+	color: #242949;
 }
-
 #line2 {
-  color: #5b7095;
+	color: #5b7095;
 }
-
 .cursor {
-  display: inline-block;
-  margin-left: 2px;
-  font-weight: 400;
-  animation: blink 0.8s infinite;
+	display: inline-block;
+	margin-left: 2px;
+	font-weight: 400;
+	animation: blink 0.8s infinite;
 }
-
 @keyframes blink {
-
-  0%,
-  50% {
-    opacity: 1;
-  }
-
-  50.1%,
-  100% {
-    opacity: 0;
-  }
+	0%,50% {
+		opacity: 1;
+	}
+	50.1%,100% {
+		opacity: 0;
+	}
 }
-
-
 .subtitle {
-  font-size: 15px;
-  text-align: center;
-  color: #606676;
+	font-size: 15px;
+	text-align: center;
+	color: #606676;
 }
-
 .hero-buttons {
-  margin-top: 28px;
-  display: flex;
-  gap: 16px;
+	margin-top: 28px;
+	display: flex;
+	gap: 16px;
 }
-
 .btn-dark {
-  padding: 12px 30px;
-  background: #0d1a44;
-  border-radius: 50px;
-  border: none;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
+	padding: 12px 30px;
+	background: #0d1a44;
+	border-radius: 50px;
+	border: none;
+	color: white;
+	font-size: 18px;
+	cursor: pointer;
 }
-
 .btn-outline-lg {
-  padding: 12px 30px;
-  border-radius: 50px;
-  background: #fff;
-  border: 1px solid #0d1a44;
-  color: #0d1a44;
-  font-size: 18px;
-  cursor: pointer;
+	padding: 12px 30px;
+	border-radius: 50px;
+	background: #fff;
+	border: 1px solid #0d1a44;
+	color: #0d1a44;
+	font-size: 18px;
+	cursor: pointer;
 }
-
-
 /* BANNER SECTION */
 .banner {
-  margin-top: 20px;
-  text-align: center;
+	margin-top: 20px;
+	text-align: center;
 }
-
 .banner-box {
-  background: #f7e0b0;
-  border-radius: 28px;
-  padding: 60px 30px 20px;
-  max-width: 1300px;
-  margin: auto;
-  position: relative;
-  height: 620px;
-  /* FIXED HEIGHT FOR PERFECT LAYOUT */
-  overflow: hidden;
-  /* prevents image overflow */
+	background: #f7e0b0;
+	border-radius: 28px;
+	padding: 60px 30px 20px;
+	max-width: 1300px;
+	margin: auto;
+	position: relative;
+	height: 620px;
+	/* FIXED HEIGHT FOR PERFECT LAYOUT */
+	overflow: hidden;
+	/* prevents image overflow */
 }
-
-
 .banner-box h2 {
-  font-size: 42px;
-  margin-top: 15px;
-  font-weight: 700;
-  color: #242949;
-  margin-bottom: 0px;
+	font-size: 42px;
+	margin-top: 15px;
+	font-weight: 700;
+	color: #242949;
+	margin-bottom: 0px;
 }
-
 .banner-box h2 .highlight1 {
-  color: #5b7095;
+	color: #5b7095;
 }
-
 .banner-box h3 {
-  font-size: 17px;
-  margin-top: 12px;
-  font-weight: 500;
-  color: #666464;
-  margin-bottom: 20px;
+	font-size: 17px;
+	margin-top: 12px;
+	font-weight: 500;
+	color: #666464;
+	margin-bottom: 20px;
 }
-
 /* FLOATING BUTTON */
 .floating-btn {
-  position: absolute;
-  top: 175px;
-  /* adjust up/down as needed */
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
+	position: absolute;
+	top: 175px;
+	/* adjust up/down as needed */
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
 }
-
-
 .banner-btn {
-  padding: 16px 42px;
-  background: #0d1a44;
-  color: #fff;
-  border: none;
-  border-radius: 40px;
-  font-size: 25px;
-  cursor: pointer;
-  font-weight: 500;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+	padding: 16px 42px;
+	background: #0d1a44;
+	color: #fff;
+	border: none;
+	border-radius: 40px;
+	font-size: 25px;
+	cursor: pointer;
+	font-weight: 500;
+	box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
 }
-
 /* IMAGE INSIDE BANNER */
 .banner-img-wrap {
-  display: flex;
-  justify-content: center;
-  margin-top: 0px;
+	display: flex;
+	justify-content: center;
+	margin-top: 0px;
 }
-
 .banner-img {
-  width: 70%;
-  height: auto;
-  /* forces same height for all images */
-  object-fit: contain;
-  /* keeps image clean + not cropped */
-  display: block;
-  margin: auto;
-  position: relative;
-  z-index: 2;
-  transition: opacity 0.4s ease-in-out;
+	width: 70%;
+	height: auto;
+	/* forces same height for all images */
+	object-fit: contain;
+	/* keeps image clean + not cropped */
+	display: block;
+	margin: auto;
+	position: relative;
+	z-index: 2;
+	transition: opacity 0.4s ease-in-out;
 }
-
-
 /* BENEFITS CARD */
 .benefits-card {
-  background: #FAF7F2;
-  max-width: 810px;
-  margin: -50px auto 0;
-  border-radius: 26px;
-  padding: 16px 13px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-  position: relative;
-  z-index: 10;
+	background: #FAF7F2;
+	max-width: 810px;
+	margin: -50px auto 0;
+	border-radius: 26px;
+	padding: 16px 13px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+	position: relative;
+	z-index: 10;
 }
-
 /* BENEFIT ITEM */
 .benefit {
-  text-align: center;
-  font-size: 12px;
-  color: #1b1b1b;
+	text-align: center;
+	font-size: 12px;
+	color: #1b1b1b;
 }
-
 .icon {
-  width: 45px;
-  margin-bottom: 10px;
+	width: 45px;
+	margin-bottom: 10px;
 }
-
 /* DISCLAIMER SECTION */
 .disclaimer {
-  margin-top: 40px;
-  padding-bottom: 50px;
+	margin-top: 40px;
+	padding-bottom: 50px;
 }
-
 .disclaimer p {
-  font-size: 12px;
-  color: #7a7f8c;
-  text-align: center;
-  max-width: 900px;
-  margin: auto;
-  line-height: 1.5;
+	font-size: 12px;
+	color: #7a7f8c;
+	text-align: center;
+	max-width: 900px;
+	margin: auto;
+	line-height: 1.5;
 }
-
 .disclaimer a {
-  color: #1d4ed8;
-  text-decoration: underline;
+	color: #1d4ed8;
+	text-decoration: underline;
 }
-
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .benefits-card {
-    grid-template-columns: 1fr;
-  }
-  .disclaimer {
-    padding-bottom: 20px;
-    margin-top: 10px;
-    margin-bottom: 20px !important;
-  }
-
-  .disclaimer   p{
-    font-size: 9px;
-  }
+	.hero-grid {
+		grid-template-columns: 1fr;
+	}
+	.benefits-card {
+		grid-template-columns: 1fr;
+	}
+	.disclaimer {
+		padding-bottom: 20px;
+		margin-top: 10px;
+		margin-bottom: 20px !important;
+	}
+	.disclaimer p{
+		font-size: 9px;
+	}
 }
-
 /* Smooth fade animation for rotating banner images */
 #rotatingImage {
-  transition: opacity 0.4s ease-in-out;
+	transition: opacity 0.4s ease-in-out;
 }
-
 /* SECTION BACKGROUND */
 .products-section {
-  background: #e9f3f1;
-  padding-bottom: 80px;
-  margin-top: 60px;
-  border-radius: 0 0 40px 40px;
-  position: relative;
+	background: #e9f3f1;
+	padding-bottom: 80px;
+	margin-top: 60px;
+	border-radius: 0 0 40px 40px;
+	position: relative;
 }
-
-
 /* TITLES */
 .products-container {
-  text-align: center;
-  max-width: 1400px;
-  margin: auto;
-  padding: 20px;
+	text-align: center;
+	max-width: 1400px;
+	margin: auto;
+	padding: 20px;
 }
-
 .products-title {
-  padding-top: 40px;
-  font-family: Poppins, sans-serif;
-  font-size: 43px;
-  font-weight: 500;
-  color: #78bfb7;
-  line-height: 1.4;
+	padding-top: 40px;
+	font-family: Poppins, sans-serif;
+	font-size: 43px;
+	font-weight: 500;
+	color: #78bfb7;
+	line-height: 1.4;
 }
-
 .products-title span {
-  color: #102850;
-
+	color: #102850;
 }
-
 .products-title .highlight {
-  color: #133a72;
+	color: #133a72;
 }
-
 .products-subtitle {
-  margin-top: 10px;
-  font-size: 17px;
-  color: #6c7a7d;
-  line-height: 1.5;
+	margin-top: 10px;
+	font-size: 17px;
+	color: #6c7a7d;
+	line-height: 1.5;
 }
-
 /* CARD GRID */
 .products-cards {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+	margin-top: 40px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 24px;
 }
-
 .product-card {
-  background: #fff;
-  padding: 22px 18px;
-  border-radius: 18px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.12);
-  text-align: center;
-  border: 3px solid #e4eef0;
+	background: #fff;
+	padding: 22px 18px;
+	border-radius: 18px;
+	box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.12);
+	text-align: center;
+	border: 3px solid #e4eef0;
 }
-
 .product-img {
-  width: 100%;
-  max-width: 320px;
-  margin-bottom: 12px;
+	width: 100%;
+	max-width: 320px;
+	margin-bottom: 12px;
 }
-
 .price {
-  background: #fbe9bf;
-  border-radius: 6px;
-  padding: 4px 0;
-  font-size: 13px;
-  margin-bottom: 10px;
+	background: #fbe9bf;
+	border-radius: 6px;
+	padding: 4px 0;
+	font-size: 13px;
+	margin-bottom: 10px;
 }
-
 .product-card h3 {
-  font-size: 18px;
-  font-weight: 700;
-  color: #0e2b40;
-  margin-top: 6px;
+	font-size: 18px;
+	font-weight: 700;
+	color: #0e2b40;
+	margin-top: 6px;
 }
-
 .desc {
-  margin: 10px 0 16px;
-  font-size: 14px;
-  color: #5a6b70;
+	margin: 10px 0 16px;
+	font-size: 14px;
+	color: #5a6b70;
 }
-
 /* BUTTONS */
 .prod-btn {
-  width: 100%;
-  padding: 15px 0;
-  font-size: 15px;
-  border-radius: 30px;
-  margin-bottom: 14px;
+	width: 100%;
+	padding: 15px 0;
+	font-size: 15px;
+	border-radius: 30px;
+	margin-bottom: 14px;
 }
-
 .btn-outline-sm {
-  width: 48%;
-  padding: 8px 0;
-  border-radius: 20px;
-  border: 1px solid #c3cdd0;
-  font-size: 13px;
-  background: white;
-  cursor: pointer;
+	width: 48%;
+	padding: 8px 0;
+	border-radius: 20px;
+	border: 1px solid #c3cdd0;
+	font-size: 13px;
+	background: white;
+	cursor: pointer;
 }
-
 .prod-actions {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
-
 /* === MAIN SCREEN WRAPPER === */
 .pricing-screen {
-  padding: 60px 20px 80px;
-  background: #f3fafb;
-  font-family: "Inter", sans-serif;
+	padding: 60px 20px 80px;
+	background: #f3fafb;
+	font-family: "Inter", sans-serif;
 }
-
 .pricing-wrapper {
-  max-width: 1200px;
-  margin: auto;
-  text-align: center;
+	max-width: 1200px;
+	margin: auto;
+	text-align: center;
 }
-
 /* TITLES */
 .pricing-title {
-  font-size: 55px;
-  color: #0b1d3c;
-  font-weight: 700;
+	font-size: 55px;
+	color: #0b1d3c;
+	font-weight: 700;
 }
-
 .pricing-subtitle {
-  margin-top: 4px;
-  font-size: 17px;
-  color: #7c8799;
+	margin-top: 4px;
+	font-size: 17px;
+	color: #7c8799;
 }
-
 /* BILLING TOGGLE */
 .billing-toggle {
-  margin: 25px auto 18px;
-  display: inline-flex;
-  border: 1px solid #d8e1ec;
-  padding: 4px;
-  border-radius: 999px;
-  background: #ffffff;
+	margin: 25px auto 18px;
+	display: inline-flex;
+	border: 1px solid #d8e1ec;
+	padding: 4px;
+	border-radius: 999px;
+	background: #ffffff;
 }
-
 .billing-pill {
-  border: none;
-  background: none;
-  padding: 10px 32px;
-  border-radius: 999px;
-  color: #1a243b;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 18px;
-  transition: 0.2s ease;
+	border: none;
+	background: none;
+	padding: 10px 32px;
+	border-radius: 999px;
+	color: #1a243b;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 18px;
+	transition: 0.2s ease;
 }
-
 .billing-pill.active {
-  background: #0b2148;
-  color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+	background: #0b2148;
+	color: #ffffff;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
-
 /* PRODUCT TABS */
 .drug-tabs {
-  margin-top: 12px;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
+	margin-top: 12px;
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	flex-wrap: wrap;
 }
-
 .drug-tab {
-  padding: 12px 22px;
-  /* bigger clickable area */
-  border-radius: 12px;
-  border: 1px solid #d8e1ec;
-  cursor: pointer;
-  font-size: 16px;
-  background: #ffffff;
-  color: #0b2148;
-  transition: all 180ms ease;
-  box-shadow: 0 2px 6px rgba(12, 34, 60, 0.04);
+	padding: 12px 22px;
+	/* bigger clickable area */
+	border-radius: 12px;
+	border: 1px solid #d8e1ec;
+	cursor: pointer;
+	font-size: 16px;
+	background: #ffffff;
+	color: #0b2148;
+	transition: all 180ms ease;
+	box-shadow: 0 2px 6px rgba(12, 34, 60, 0.04);
 }
-
 .drug-tab:hover {
-  transform: translateY(-2px);
+	transform: translateY(-2px);
 }
-
 .drug-tab.active {
-  background: linear-gradient(90deg, #afd1cc 0%, #4a7fb8 100%);
-  color: #ffffff;
-  border-color: transparent;
-  box-shadow: 0 6px 18px rgba(74, 127, 184, 0.12);
+	background: linear-gradient(90deg, #afd1cc 0%, #4a7fb8 100%);
+	color: #ffffff;
+	border-color: transparent;
+	box-shadow: 0 6px 18px rgba(74, 127, 184, 0.12);
 }
-
 /* LAYOUT */
 .pricing-layout {
-  margin-top: 34px;
-  display: grid;
-  grid-template-columns: 560px 560px;
-  /* spacing between the two columns — adjustable via --pricing-gap */
-  gap: var(--pricing-gap, 20px);
-  text-align: left;
-  align-items: start;
+	margin-top: 34px;
+	display: grid;
+	grid-template-columns: 560px 560px;
+	/* spacing between the two columns — adjustable via --pricing-gap */
+	gap: var(--pricing-gap, 20px);
+	text-align: left;
+	align-items: start;
 }
-
 /* === CARD === */
 .pricing-card {
-  background: #ffffff;
-  margin-top: 30px;
-  border-radius: 20px;
-  padding: 0;
-  /* header handles its own padding */
-  box-shadow: 0 24px 60px rgba(2, 32, 71, 0.06);
-  border: 1px solid rgba(13, 26, 68, 0.04);
-  width: 500px;
-  /* fixed width */
-  min-height: 550px;
-  /* fixed height so content doesn't resize the card */
-  height: auto;
-  /* 👈 allows growth */
-  overflow: visible;
-  position: relative;
-  /* allow absolutely positioned footer */
-  overflow: hidden;
-  /* 👈 keeps content inside */
-  display: flex;
-  flex-direction: column;
+	background: #ffffff;
+	margin-top: 30px;
+	border-radius: 20px;
+	padding: 0;
+	/* header handles its own padding */
+	box-shadow: 0 24px 60px rgba(2, 32, 71, 0.06);
+	border: 1px solid rgba(13, 26, 68, 0.04);
+	width: 500px;
+	/* fixed width */
+	min-height: 550px;
+	/* fixed height so content doesn't resize the card */
+	height: auto;
+	/* 👈 allows growth */
+	overflow: visible;
+	position: relative;
+	/* allow absolutely positioned footer */
+	overflow: hidden;
+	/* 👈 keeps content inside */
+	display: flex;
+	flex-direction: column;
 }
-
 /* HEADER GRADIENT */
 .card-header {
-  background: linear-gradient(135deg, #8ea7a3 0%, #4a7fb8 100%);
-  padding: 26px 26px;
-  border-radius: 18px 18px 12px 12px;
-  color: #ffffff;
+	background: linear-gradient(135deg, #8ea7a3 0%, #4a7fb8 100%);
+	padding: 26px 26px;
+	border-radius: 18px 18px 12px 12px;
+	color: #ffffff;
 }
-
 .card-header h3 {
-  margin: 0;
-  font-size: 30px;
-  font-weight: 600;
+	margin: 0;
+	font-size: 30px;
+	font-weight: 600;
 }
-
 .card-header .price-main {
-  margin-top: 6px;
-  font-size: 45px;
-  font-weight: 800;
+	margin-top: 6px;
+	font-size: 45px;
+	font-weight: 800;
 }
-
 .card-header .price-main span {
-  font-size: 19px;
-  font-style: italic;
-  font-weight: 500;
+	font-size: 19px;
+	font-style: italic;
+	font-weight: 500;
 }
-
 /* BODY */
 .card-body {
-  padding: 22px 30px 90px;
-  /* leave space at bottom for the absolute footer */
-  overflow: visible;
-  /* do not scroll */
-  flex: 1 1 auto;
+	padding: 22px 30px 90px;
+	/* leave space at bottom for the absolute footer */
+	overflow: visible;
+	/* do not scroll */
+	flex: 1 1 auto;
 }
-
 .feature-list {
-  list-style: none;
-  padding: 0;
-  margin: 12px 0 0;
+	list-style: none;
+	padding: 0;
+	margin: 12px 0 0;
 }
-
 .feature-list li {
-  font-style: italic !important;
-  margin-bottom: 23px;
-  font-size: 20px;
-  padding-left: 20px;
-  position: relative;
-  color: #324155;
+	font-style: italic !important;
+	margin-bottom: 23px;
+	font-size: 20px;
+	padding-left: 20px;
+	position: relative;
+	color: #324155;
 }
-
 .feature-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 6px;
-  width: 8px;
-  height: 8px;
-  background: #0b2148;
-  border-radius: 50%;
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 6px;
+	width: 8px;
+	height: 8px;
+	background: #0b2148;
+	border-radius: 50%;
 }
-
 /* CTA BUTTON */
 .card-cta button {
-  width: 280px;
-  margin-top: 18px;
-  padding: 12px 0;
-  background: #0b2148;
-  border-radius: 50px;
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
+	width: 280px;
+	margin-top: 18px;
+	padding: 12px 0;
+	background: #0b2148;
+	border-radius: 50px;
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: 600;
+	border: none;
+	cursor: pointer;
 }
-
-/* ===============================
-   UNIFIED PRODUCT CARD (MASTER)
-   =============================== */
-
+/* ===============================UNIFIED PRODUCT CARD (MASTER)=============================== */
 .unified-card {
-  background: #ffffff;
-  border-radius: 22px;
-  padding: 22px 18px 24px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-  border: 3px solid #e4eef0;
-  text-align: center;
+	background: #ffffff;
+	border-radius: 22px;
+	padding: 22px 18px 24px;
+	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+	border: 3px solid #e4eef0;
+	text-align: center;
 }
-
 /* IMAGE */
 .product-image-wrap {
-  background: #dfeaf0;
-  border-radius: 18px;
-  padding: 16px;
-  margin-bottom: 14px;
+	background: #dfeaf0;
+	border-radius: 18px;
+	padding: 16px;
+	margin-bottom: 14px;
 }
-
 .product-image-wrap img {
-  width: 100%;
-  max-height: 220px;
-  object-fit: contain;
+	width: 100%;
+	max-height: 220px;
+	object-fit: contain;
 }
-
 /* PRICE STRIP */
 .price-badge {
-  background: #fbe9bf;
-  border-radius: 8px;
-  padding: 6px 0;
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 12px;
+	background: #fbe9bf;
+	border-radius: 8px;
+	padding: 6px 0;
+	font-size: 14px;
+	font-weight: 500;
+	margin-bottom: 12px;
 }
-
-
 /* TITLE */
 .product-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: #fdfdfd;
-  margin-bottom: 6px;
+	font-size: 20px;
+	font-weight: 700;
+	color: #fdfdfd;
+	margin-bottom: 6px;
 }
-
 /* TAG */
 .product-tag {
-  margin-top: 7px;
-  display: inline-block;
-  background: #98bdba;
-  color: #ffffff;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 999px;
-  margin-bottom: 5px;
+	margin-top: 7px;
+	display: inline-block;
+	background: #98bdba;
+	color: #ffffff;
+	font-size: 11px;
+	font-weight: 600;
+	padding: 4px 10px;
+	border-radius: 999px;
+	margin-bottom: 5px;
 }
-
 /* DESCRIPTION */
 .product-desc {
-  font-size: 14px;
-  color: #ffffff;
-  line-height: 1.5;
-  margin-bottom: 16px;
+	font-size: 14px;
+	color: #ffffff;
+	line-height: 1.5;
+	margin-bottom: 16px;
 }
-
 /* Footer that holds the CTA and stays fixed at the bottom of the card */
 .card-footer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 18px;
-  /* fixed distance from bottom of the card */
-  padding: 0 30px;
-  background: transparent;
-  display: flex;
-  justify-content: var(--cta-justify, center);
-  align-items: center;
-  transform: translateY(var(--cta-offset, 0px));
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 18px;
+	/* fixed distance from bottom of the card */
+	padding: 0 30px;
+	background: transparent;
+	display: flex;
+	justify-content: var(--cta-justify, center);
+	align-items: center;
+	transform: translateY(var(--cta-offset, 0px));
 }
-
 /* Quick utility classes to force alignment without editing variables */
 .card-footer.cta-left {
-  justify-content: flex-start;
+	justify-content: flex-start;
 }
-
 .card-footer.cta-center {
-  justify-content: center;
+	justify-content: center;
 }
-
 .card-footer.cta-right {
-  justify-content: flex-end;
+	justify-content: flex-end;
 }
-
 /* Also allow setting alignment by adding class on the card container */
 .pricing-card.cta-left {
-  --cta-justify: flex-start;
+	--cta-justify: flex-start;
 }
-
 .pricing-card.cta-center {
-  --cta-justify: center;
+	--cta-justify: center;
 }
-
 .pricing-card.cta-right {
-  --cta-justify: flex-end;
+	--cta-justify: flex-end;
 }
-
 /* === RIGHT IMAGE PLACEHOLDER === */
 /* MODEL IMAGE CONTAINER */
 .model-wrapper {
-  margin-top: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	margin-top: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-
 .model-bg {
-  width: 600px;
-  height: 400px;
-  background: linear-gradient(180deg,
-      #7690ad 0%,
-      #afc0cf 35%,
-      #c7e0ec 70%,
-      #e6e8ee 100%);
-  border-radius: 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 16px;
-  box-shadow: 0 20px 50px rgba(2, 32, 71, 0.06);
-  overflow: visible;
-  margin-top: 28px;
-  /* push the background down visually */
+	width: 600px;
+	height: 400px;
+	background: linear-gradient(180deg,#7690ad 0%,#afc0cf 35%,#c7e0ec 70%,#e6e8ee 100%);
+	border-radius: 28px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 16px;
+	box-shadow: 0 20px 50px rgba(2, 32, 71, 0.06);
+	overflow: visible;
+	margin-top: 28px;
+	/* push the background down visually */
 }
-
 .model-img {
-  width: auto;
-  height: 600px;
-  object-fit: contain;
-  position: relative;
-  z-index: 2;
+	width: auto;
+	height: 600px;
+	object-fit: contain;
+	position: relative;
+	z-index: 2;
 }
-
-
-/* =====================================================
-   MOBILE VIEW CONFIGURATION
-   Edit values here to customize mobile behavior easily
-   ===================================================== */
-
+/* =====================================================MOBILE VIEW CONFIGURATIONEdit values here to customize mobile behavior easily===================================================== */
 @media (max-width: 768px) {
-
-  /* ======================
-     GLOBAL CONTROLS
-     ====================== */
-
-  :root {
-    --mobile-padding: 14px;
-    --mobile-gap: 18px;
-    --mobile-radius: 20px;
-
-    --h1-size: 32px;
-    --h2-size: 28px;
-    --text-size: 14px;
-    --small-text: 12px;
-
-    --btn-height: 48px;
-    --btn-font: 16px;
-  }
-
-  body {
-    font-size: var(--text-size);
-  }
-
-  .container {
-    padding: 0 var(--mobile-padding);
-  }
-
-  /* ======================
-     NAVIGATION
-     ====================== */
-
-  .menu {
-    display: none;
-    /* hide desktop nav */
-  }
-
-  .nav-buttons {
-    gap: 8px;
-  }
-
-  .btn-primary,
-  .btn-outline {
-    font-size: 13px;
-    padding: 8px 14px;
-  }
-
-  /* ======================
-     HERO SECTION
-     ====================== */
-
-  .hero {
-    padding-top: 15px;
-    text-align: center;
-    padding-bottom: 20px;
-  }
-
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: var(--mobile-gap);
-  }
-
-  .hero-title,
-  #line1,
-  #line2 {
-    font-size: var(--h1-size);
-    line-height: 1.05rem;
-    display: block;
-    margin-top: 5px !important;
-  }
-
-  .subtitle {
-    font-size: var(--text-size);
-    margin-top: 8px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 10px;
-  }
-
-  .btn-dark,
-  .btn-outline-lg {
-    width: 100%;
-    height: var(--btn-height);
-    font-size: var(--btn-font);
-    padding: 12px 0;
-  }
-
-  .btn-outline-lg {
-    margin-bottom: 5px import;
-  }
-
-  /* ======================
-   HERO TITLE – TIGHTEN MOBILE SPACING
-   ====================== */
-
-  /* Remove any forced spacing */
-  .hero-title {
-    line-height: 1.1;
-    margin-bottom: 6px;
-  }
-
-  /* Line 1 */
-  #line1 {
-    margin-bottom: 2px !important;
-    /* 👈 tighter */
-    line-height: 1.05;
-  }
-
-  /* Line 2 */
-  #line2 {
-    margin-top: 0 !important;
-    /* 👈 pull it closer */
-    line-height: 1.05;
-    padding-top: 0;
-  }
-
-  /* Subtitle under the typing line */
-  .subtitle {
-    margin-top: 6px !important;
-    /* reduce gap below */
-    line-height: 1.35;
-  }
-
-  /* Remove spacing caused by <br> */
-  .hero-title br {
-    display: none;
-  }
-
-
-  /* ======================
-     BANNER SECTION
-     ====================== */
-
-  .banner-box {
-    height: 400px;
-    padding: 36px 18px 0;
-    border-radius: var(--mobile-radius);
-  }
-
-  .banner-box h2 {
-    font-size: var(--h2-size);
-    top: 140px;
-  }
-
-  .banner-box h3 {
-    font-size: 12px;
-    margin-bottom: 4px;
-  }
-
-  .floating-btn {
-    top: 150px;
-  }
-
-  .banner-btn {
-    font-size: 20px;
-    padding: 12px 28px;
-  }
-
-  .banner-img {
-    margin-top: 5px;
-    margin-bottom: -70px;
-  }
-
-  .banner-box p {
-    font-size: 12px;
-  }
-
-
-  /* ======================
-     PRODUCTS SECTION
-     ====================== */
-
-  .products-section {
-    padding-bottom: 60px;
-    margin-top: 10px;
-    border-radius: var(--mobile-radius) var(--mobile-radius) 0 0;
-  }
-  .products-title {
-    padding-top: 30px;
-    font-size: 24px;
-  }
-
-  .products-subtitle {
-    font-size: 11px;
-  }
-
-  .products-cards {
-    grid-template-columns: 1fr !important;
-    gap: 16px;
-  }
-
-  .product-card {
-    padding: 16px;
-    border-radius: var(--mobile-radius);
-  }
-
-  .desc {
-    font-size: var(--small-text);
-  }
-
-  /* ======================
-     PRICING SECTION
-     ====================== */
-
-  .pricing-title {
-    font-size: var(--h1-size);
-  }
-
-  .pricing-subtitle {
-    font-size: var(--text-size);
-  }
-
-  .billing-toggle {
-    width: 100%;
-  }
-
-  .billing-pill {
-    flex: 1;
-    text-align: center;
-    font-size: 14px;
-  }
-
-  .drug-tab {
-    width: 100%;
-    font-size: 14px;
-    padding: 10px 0;
-  }
-
-  .pricing-layout {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .pricing-card {
-    width: 100%;
-    height: auto;
-    padding-bottom: 28px;
-  }
-
-  .card-header h3 {
-    font-size: 22px;
-  }
-
-  .price-main {
-    font-size: 28px;
-  }
-
-  .feature-list li {
-    font-size: 15px;
-    margin-bottom: 15px;
-  }
-
-  .card-footer {
-    position: relative;
-    margin-top: 0px;
-  }
-
-  .card-footer button,
-  .card-footer a {
-    width: 100%;
-    height: var(--btn-height);
-  }
-
-  /* ======================
-     MODEL IMAGE
-     ====================== */
-
-  .model-wrapper {
-    margin-top: 10px;
-  }
-
-  .model-bg {
-    width: 100%;
-    height: 240px;
-    border-radius: var(--mobile-radius);
-  }
-
-  .model-img {
-    height: 300px;
-  }
+	/* ======================GLOBAL CONTROLS====================== */
+	:root {
+		--mobile-padding: 14px;
+		--mobile-gap: 18px;
+		--mobile-radius: 20px;
+		--h1-size: 32px;
+		--h2-size: 28px;
+		--text-size: 14px;
+		--small-text: 12px;
+		--btn-height: 48px;
+		--btn-font: 16px;
+	}
+	body {
+		font-size: var(--text-size);
+	}
+	.container {
+		padding: 0 var(--mobile-padding);
+	}
+	/* ======================NAVIGATION====================== */
+	.menu {
+		display: none;
+		/* hide desktop nav */
+	}
+	.nav-buttons {
+		gap: 8px;
+	}
+	.btn-primary,.btn-outline {
+		font-size: 13px;
+		padding: 8px 14px;
+	}
+	/* ======================HERO SECTION====================== */
+	.hero {
+		padding-top: 15px;
+		text-align: center;
+		padding-bottom: 20px;
+	}
+	.hero-grid {
+		grid-template-columns: 1fr;
+		gap: var(--mobile-gap);
+	}
+	.hero-title,#line1,#line2 {
+		font-size: var(--h1-size);
+		line-height: 1.05rem;
+		display: block;
+		margin-top: 5px !important;
+	}
+	.subtitle {
+		font-size: var(--text-size);
+		margin-top: 8px;
+	}
+	.hero-buttons {
+		flex-direction: column;
+		gap: 12px;
+		margin-top: 10px;
+	}
+	.btn-dark,.btn-outline-lg {
+		width: 100%;
+		height: var(--btn-height);
+		font-size: var(--btn-font);
+		padding: 12px 0;
+	}
+	.btn-outline-lg {
+		margin-bottom: 5px import;
+	}
+	/* ======================HERO TITLE – TIGHTEN MOBILE SPACING====================== */
+	/* Remove any forced spacing */
+	.hero-title {
+		line-height: 1.1;
+		margin-bottom: 6px;
+	}
+	/* Line 1 */
+	#line1 {
+		margin-bottom: 2px !important;
+		/* 👈 tighter */
+		line-height: 1.05;
+	}
+	/* Line 2 */
+	#line2 {
+		margin-top: 0 !important;
+		/* 👈 pull it closer */
+		line-height: 1.05;
+		padding-top: 0;
+	}
+	/* Subtitle under the typing line */
+	.subtitle {
+		margin-top: 6px !important;
+		/* reduce gap below */
+		line-height: 1.35;
+	}
+	/* Remove spacing caused by <br> */
+	.hero-title br {
+		display: none;
+	}
+	/* ======================BANNER SECTION====================== */
+	.banner-box {
+		height: 400px;
+		padding: 36px 18px 0;
+		border-radius: var(--mobile-radius);
+	}
+	.banner-box h2 {
+		font-size: var(--h2-size);
+		top: 140px;
+	}
+	.banner-box h3 {
+		font-size: 12px;
+		margin-bottom: 4px;
+	}
+	.floating-btn {
+		top: 150px;
+	}
+	.banner-btn {
+		font-size: 20px;
+		padding: 12px 28px;
+	}
+	.banner-img {
+		margin-top: 5px;
+		margin-bottom: -70px;
+	}
+	.banner-box p {
+		font-size: 12px;
+	}
+	/* ======================PRODUCTS SECTION====================== */
+	.products-section {
+		padding-bottom: 60px;
+		margin-top: 10px;
+		border-radius: var(--mobile-radius) var(--mobile-radius) 0 0;
+	}
+	.products-title {
+		padding-top: 30px;
+		font-size: 24px;
+	}
+	.products-subtitle {
+		font-size: 11px;
+	}
+	.products-cards {
+		grid-template-columns: 1fr !important;
+		gap: 16px;
+	}
+	.product-card {
+		padding: 16px;
+		border-radius: var(--mobile-radius);
+	}
+	.desc {
+		font-size: var(--small-text);
+	}
+	/* ======================PRICING SECTION====================== */
+	.pricing-title {
+		font-size: var(--h1-size);
+	}
+	.pricing-subtitle {
+		font-size: var(--text-size);
+	}
+	.billing-toggle {
+		width: 100%;
+	}
+	.billing-pill {
+		flex: 1;
+		text-align: center;
+		font-size: 14px;
+	}
+	.drug-tab {
+		width: 100%;
+		font-size: 14px;
+		padding: 10px 0;
+	}
+	.pricing-layout {
+		grid-template-columns: 1fr;
+		gap: 24px;
+	}
+	.pricing-card {
+		width: 100%;
+		height: auto;
+		padding-bottom: 28px;
+	}
+	.card-header h3 {
+		font-size: 22px;
+	}
+	.price-main {
+		font-size: 28px;
+	}
+	.feature-list li {
+		font-size: 15px;
+		margin-bottom: 15px;
+	}
+	.card-footer {
+		position: relative;
+		margin-top: 0px;
+	}
+	.card-footer button,.card-footer a {
+		width: 100%;
+		height: var(--btn-height);
+	}
+	/* ======================MODEL IMAGE====================== */
+	.model-wrapper {
+		margin-top: 10px;
+	}
+	.model-bg {
+		width: 100%;
+		height: 240px;
+		border-radius: var(--mobile-radius);
+	}
+	.model-img {
+		height: 300px;
+	}
 }
-
-/* =====================================================
-   MOBILE BANNER — MINIFIED DESKTOP STYLE
-   ===================================================== */
+/* =====================================================MOBILE BANNER — MINIFIED DESKTOP STYLE===================================================== */
 @media (max-width: 768px) {
-
-  /* Banner container */
-  .banner-box {
-    padding: 36px 16px 0;
-    border-radius: 22px;
-    height: auto;
-  }
-
-  .banner-box h2 {
-    font-size: 26px;
-    margin-bottom: 12px;
-  }
-
-  /* CTA button */
-  .banner-btn {
-    font-size: 13px;
-    padding: 10px 26px;
-  }
-
-  /* Model image positioning */
-  .banner-img-wrap {
-    margin-top: 80px;
-  }
-
-  .banner-img {
-    width: 100%;
-    height: auto;
-    max-height: 320px;
-    object-fit: contain;
-  }
-
-  /* ==========================
-     BENEFITS — HORIZONTAL BAR
-     ========================== */
-  .benefits-card {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    margin: -30px auto 0;
-    padding: 9px 9px;
-    border-radius: 18px;
-    max-width: 90%;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
-  }
-
-  .benefit {
-    text-align: center;
-    padding: 0;
-  }
-
-  .benefit img {
-    width: 28px;
-    margin-bottom: 4px;
-  }
-
-  .benefit p {
-    font-size: 9px;
-    line-height: 1.3;
-  }
+	/* Banner container */
+	.banner-box {
+		padding: 36px 16px 0;
+		border-radius: 22px;
+		height: auto;
+	}
+	.banner-box h2 {
+		font-size: 26px;
+		margin-bottom: 12px;
+	}
+	/* CTA button */
+	.banner-btn {
+		font-size: 13px;
+		padding: 10px 26px;
+	}
+	/* Model image positioning */
+	.banner-img-wrap {
+		margin-top: 80px;
+	}
+	.banner-img {
+		width: 100%;
+		height: auto;
+		max-height: 320px;
+		object-fit: contain;
+	}
+	/* ==========================BENEFITS — HORIZONTAL BAR========================== */
+	.benefits-card {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 8px;
+		margin: -30px auto 0;
+		padding: 9px 9px;
+		border-radius: 18px;
+		max-width: 90%;
+		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+	}
+	.benefit {
+		text-align: center;
+		padding: 0;
+	}
+	.benefit img {
+		width: 28px;
+		margin-bottom: 4px;
+	}
+	.benefit p {
+		font-size: 9px;
+		line-height: 1.3;
+	}
 }
-
-/* =====================================================
-   MOBILE PRICING — CLEAN & PREMIUM
-   Paste at bottom of CSS
-   ===================================================== */
+/* =====================================================MOBILE PRICING — CLEAN & PREMIUMPaste at bottom of CSS===================================================== */
 @media (max-width: 768px) {
-
-  /* SECTION SPACING */
-  .pricing-screen {
-    padding: 40px 14px 60px;
-  }
-
-  .pricing-title {
-    font-size: 32px;
-    line-height: 1.2;
-    margin-bottom: 6px;
-  }
-
-  .pricing-subtitle {
-    font-size: 14px;
-    line-height: 1.4;
-    margin-bottom: 18px;
-  }
-
-  /* BILLING TOGGLE */
-  .billing-toggle {
-    width: 100%;
-    padding: 4px;
-    margin-bottom: 16px;
-  }
-
-  .billing-pill {
-    flex: 1;
-    font-size: 14px;
-    padding: 10px 0;
-  }
-
-  /* DRUG TABS — 2x2 GRID */
-  .drug-tabs {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin-bottom: 5px;
-  }
-
-  .drug-tab {
-    width: 100%;
-    font-size: 14px;
-    padding: 12px 0;
-    border-radius: 14px;
-  }
-
-  /* LAYOUT */
-  .pricing-layout {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    padding-top: 6px;
-  }
-
-
-  /* CARD HEADER */
-  .card-header {
-    padding: 18px;
-    border-radius: 18px;
-  }
-
-  .card-header h3 {
-    font-size: 20px;
-    line-height: 1.2;
-    margin-bottom: 4px;
-  }
-
-  .card-header .price-main {
-    font-size: 26px;
-    margin-top: 2px;
-  }
-
-  /* CARD BODY */
-  .card-body {
-    padding: 16px 18px 12px;
-  }
-
-  .feature-list {
-    margin-top: 6px;
-  }
-
-  .feature-list li {
-    font-size: 14px;
-    font-style: italic !important;
-    margin-bottom: 7px;
-    line-height: 1.4;
-    padding-left: 18px;
-  }
-
-  .feature-list li::before {
-    width: 6px;
-    height: 6px;
-    top: 7px;
-  }
-
-  /* CTA */
-  .card-footer {
-    position: relative;
-    margin-top: 10px;
-    padding: 0 18px;
-  }
-
-  .card-footer button {
-    width: 100%;
-    height: 48px;
-    font-size: 16px;
-  }
+	/* SECTION SPACING */
+	.pricing-screen {
+		padding: 40px 14px 60px;
+	}
+	.pricing-title {
+		font-size: 32px;
+		line-height: 1.2;
+		margin-bottom: 6px;
+	}
+	.pricing-subtitle {
+		font-size: 14px;
+		line-height: 1.4;
+		margin-bottom: 18px;
+	}
+	/* BILLING TOGGLE */
+	.billing-toggle {
+		width: 100%;
+		padding: 4px;
+		margin-bottom: 16px;
+	}
+	.billing-pill {
+		flex: 1;
+		font-size: 14px;
+		padding: 10px 0;
+	}
+	/* DRUG TABS — 2x2 GRID */
+	.drug-tabs {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
+		margin-bottom: 5px;
+	}
+	.drug-tab {
+		width: 100%;
+		font-size: 14px;
+		padding: 12px 0;
+		border-radius: 14px;
+	}
+	/* LAYOUT */
+	.pricing-layout {
+		grid-template-columns: 1fr;
+		gap: 18px;
+		padding-top: 6px;
+	}
+	/* CARD HEADER */
+	.card-header {
+		padding: 18px;
+		border-radius: 18px;
+	}
+	.card-header h3 {
+		font-size: 20px;
+		line-height: 1.2;
+		margin-bottom: 4px;
+	}
+	.card-header .price-main {
+		font-size: 26px;
+		margin-top: 2px;
+	}
+	/* CARD BODY */
+	.card-body {
+		padding: 16px 18px 12px;
+	}
+	.feature-list {
+		margin-top: 6px;
+	}
+	.feature-list li {
+		font-size: 14px;
+		font-style: italic !important;
+		margin-bottom: 7px;
+		line-height: 1.4;
+		padding-left: 18px;
+	}
+	.feature-list li::before {
+		width: 6px;
+		height: 6px;
+		top: 7px;
+	}
+	/* CTA */
+	.card-footer {
+		position: relative;
+		margin-top: 10px;
+		padding: 0 18px;
+	}
+	.card-footer button {
+		width: 100%;
+		height: 48px;
+		font-size: 16px;
+	}
 }
-
 /* ===== BUNDLE CARD ONLY ===== */
 .bundle-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 24px;
+	background: #fff;
+	border-radius: 16px;
+	padding: 24px;
 }
-
 .bundle-title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 12px;
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 12px;
 }
-
 .pricing-row {
-  width: 100%;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  padding: 10px 14px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #f8fafc;
-  cursor: pointer;
+	width: 100%;
+	border: 1px solid #cbd5e1;
+	border-radius: 6px;
+	padding: 10px 14px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	background: #f8fafc;
+	cursor: pointer;
 }
-
 .supply-pill {
-  font-size: 11px;
-  background: #e6eef7;
-  color: #375a8c;
-  padding: 2px 8px;
-  border-radius: 999px;
+	font-size: 11px;
+	background: #e6eef7;
+	color: #375a8c;
+	padding: 2px 8px;
+	border-radius: 999px;
 }
-
 .pricing-row .icon {
-  margin-left: auto;
-  font-size: 18px;
+	margin-left: auto;
+	font-size: 18px;
 }
-
 .pricing-hidden {
-  display: none;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  margin-top: 10px;
-  padding: 10px 14px;
+	display: none;
+	border: 1px solid #cbd5e1;
+	border-radius: 8px;
+	margin-top: 10px;
+	padding: 10px 14px;
 }
-
 .pricing-hidden.open {
-  display: block;
+	display: block;
 }
-
 .price-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #e5e7eb;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0;
+	border-bottom: 1px solid #e5e7eb;
 }
-
 .price-row:last-child {
-  border-bottom: none;
+	border-bottom: none;
 }
-
 .price-row .dose {
-  font-size: 12px;
-  color: #64748b;
+	font-size: 12px;
+	color: #64748b;
 }
-
 .prod-btn.full {
-  width: 100%;
-  margin-top: 16px;
-  margin-bottom: 40px !important;
+	width: 100%;
+	margin-top: 16px;
+	margin-bottom: 40px !important;
 }
-
 /* ===== BUNDLE UI ===== */
-
 .bundle-pill {
-  background: linear-gradient(135deg, #9bbfc1, #6f8fa6);
-  color: #fff;
-  font-size: 22px;
-  font-weight: 600;
-  padding: 16px 22px;
-  border-radius: 16px;
-  margin-bottom: 18px;
+	background: linear-gradient(135deg, #9bbfc1, #6f8fa6);
+	color: #fff;
+	font-size: 22px;
+	font-weight: 600;
+	padding: 16px 22px;
+	border-radius: 16px;
+	margin-bottom: 18px;
 }
-
 .bundle-includes-box {
-  border: 1.5px solid #7b8fb3;
-  border-radius: 14px;
-  padding: 18px 20px;
-  margin-bottom: 16px;
-  background: #fff;
+	border: 1.5px solid #7b8fb3;
+	border-radius: 14px;
+	padding: 18px 20px;
+	margin-bottom: 16px;
+	background: #fff;
 }
-
 .bundle-includes-box h4 {
-  margin-bottom: 10px;
-  font-weight: 600;
+	margin-bottom: 10px;
+	font-weight: 600;
 }
-
 .bundle-pricing-toggle {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1.5px solid #7b8fb3;
-  border-radius: 12px;
-  padding: 16px 16px;
-  background: #fff;
-  cursor: pointer;
-  margin-bottom: 8px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1.5px solid #7b8fb3;
+	border-radius: 12px;
+	padding: 16px 16px;
+	background: #fff;
+	cursor: pointer;
+	margin-bottom: 8px;
 }
-
 .supply-badge {
-  font-size: 15px;
-  background: #e8f1ff;
-  color: #395a8a;
-  padding: 4px 8px;
-  border-radius: 6px;
-  margin-left: auto;
-  margin-right: 10px;
+	font-size: 15px;
+	background: #e8f1ff;
+	color: #395a8a;
+	padding: 4px 8px;
+	border-radius: 6px;
+	margin-left: auto;
+	margin-right: 10px;
 }
-
 .bundle-pricing-content {
-  display: none;
-  border: 1.5px solid #7b8fb3;
-  border-radius: 12px;
-  padding: 12px 14px;
-  margin-bottom: 16px;
+	display: none;
+	border: 1.5px solid #7b8fb3;
+	border-radius: 12px;
+	padding: 12px 14px;
+	margin-bottom: 16px;
 }
-
 .bundle-pricing-content.open {
-  display: block;
+	display: block;
 }
-
 .price-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #e2e8f0;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0;
+	border-bottom: 1px solid #e2e8f0;
 }
-
 .price-row:last-child {
-  border-bottom: none;
+	border-bottom: none;
 }
-
 .price-row .dose {
-  font-size: 12px;
-  color: #6b7280;
+	font-size: 12px;
+	color: #6b7280;
 }
-
 .price-row .amount {
-  font-weight: 600;
+	font-weight: 600;
 }
-
 .bundle-pricing-content {
-  display: none;
+	display: none;
 }
-
 @media (max-width: 768px) {
-  .bundle-card {
-    padding: 18px;
-  }
-
-  .bundle-pill {
-    font-size: 20px;
-    padding: 12px 18px;
-  }
-
-  .supply-badge {
-    font-size: 12px;
-    margin-left: 5px !important;
-    padding: 4px 3px;
-  }
-
-  .bundle-pricing-toggle {
-    font-size: 12px !important;
-  }
+	.bundle-card {
+		padding: 18px;
+	}
+	.bundle-pill {
+		font-size: 20px;
+		padding: 12px 18px;
+	}
+	.supply-badge {
+		font-size: 13px;
+		margin-left: 5px !important;
+		padding: 4px 3px;
+	}
+	.bundle-pricing-toggle {
+		font-size: 12px !important;
+	}
 }
-
-/* ===============================
-   PRICING SCREEN BACKGROUND TINT
-   =============================== */
+/* ===============================PRICING SCREEN BACKGROUND TINT=============================== */
 .pricing-screen {
-  background: linear-gradient(180deg,
-      #ffffffa8 0%,
-      #9fc3d8ad 100%);
-  padding: 80px 16px;
+	background: linear-gradient(180deg,#ffffffa8 0%,#9fc3d8ad 100%);
+	padding: 80px 16px;
 }
-
-
-
-/* ===============================  
-   BUNDLE PILL (TOP SECTION)
-   =============================== */
+/* ===============================BUNDLE PILL (TOP SECTION)=============================== */
 .bundle-pill {
-  background: linear-gradient(180deg, #8fb3c1, #86a9b8);
-  border-radius: 20px;
-  padding: 24px 22px;
-  text-align: center;
-  color: #ffffff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+	background: linear-gradient(180deg, #8fb3c1, #86a9b8);
+	border-radius: 20px;
+	padding: 24px 22px;
+	text-align: center;
+	color: #ffffff;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
-
 .bundle-title {
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: -0.3px;
+	font-size: 22px;
+	font-weight: 600;
+	letter-spacing: -0.3px;
 }
-
-/* ===============================
-   STARTING PRICE
-   =============================== */
+/* ===============================STARTING PRICE=============================== */
 .bundle-starting-price {
-  margin-top: 8px;
-  font-size: 15px;
-  opacity: 0.95;
+	margin-top: 8px;
+	font-size: 15px;
+	opacity: 0.95;
 }
-
 .bundle-starting-price strong {
-  font-size: 18px;
-  font-weight: 600;
+	font-size: 18px;
+	font-weight: 600;
 }
-
-/* ===============================
-   SUBTEXT + LINK
-   =============================== */
+/* ===============================SUBTEXT + LINK=============================== */
 .bundle-subtext {
-  margin-top: 12px;
-  font-size: 14px;
-  line-height: 1.45;
-  opacity: 0.95;
+	margin-top: 12px;
+	font-size: 14px;
+	line-height: 1.45;
+	opacity: 0.95;
 }
-
 .bundle-subtext div:first-child {
-  margin-bottom: 4px;
+	margin-bottom: 4px;
 }
-
 .bundle-link-text {
-  font-weight: 500;
-  text-decoration: underline;
-  cursor: pointer;
+	font-weight: 500;
+	text-decoration: underline;
+	cursor: pointer;
 }
-
-/* ===============================
-   PRICING TOGGLE
-   =============================== */
+/* ===============================PRICING TOGGLE=============================== */
 .bundle-pricing-toggle {
-  margin-top: 18px;
-  padding: 14px 18px;
-  border-radius: 16px;
-  background: #ffffff;
-  border: 1px solid #dde8ee;
-  font-size: 16px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+	margin-top: 18px;
+	padding: 14px 18px;
+	border-radius: 16px;
+	background: #ffffff;
+	border: 1px solid #dde8ee;
+	font-size: 16px;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
 }
-
-/* ===============================
-   INCLUDES BOX
-   =============================== */
+/* ===============================INCLUDES BOX=============================== */
 .bundle-includes-box {
-  margin-top: 16px;
-  padding: 20px;
-  border-radius: 18px;
-  background: #ffffff;
-  border: 1px solid #e6eef3;
+	margin-top: 16px;
+	padding: 20px;
+	border-radius: 18px;
+	background: #ffffff;
+	border: 1px solid #e6eef3;
 }
-
 .bundle-includes-box h4 {
-  font-size: 15px;
-  margin-bottom: 12px;
-  font-weight: 600;
+	font-size: 15px;
+	margin-bottom: 12px;
+	font-weight: 600;
 }
-
-/* ===============================
-   GET STARTED BUTTON
-   =============================== */
+/* ===============================GET STARTED BUTTON=============================== */
 .prod-btn {
-  margin-top: 20px;
-  height: 54px;
-  border-radius: 999px;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  box-shadow: 0 8px 22px rgba(12, 35, 64, 0.18);
+	margin-top: 20px;
+	height: 54px;
+	border-radius: 999px;
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: 0.3px;
+	box-shadow: 0 8px 22px rgba(12, 35, 64, 0.18);
 }
-
-/* ===============================
-   CENTER PRICING CARD
-   =============================== */
+/* ===============================CENTER PRICING CARD=============================== */
 .pricing-layout {
-  display: flex !important;
-  justify-content: center !important;
+	display: flex !important;
+	justify-content: center !important;
 }
-
 .pricing-card {
-  margin: 0 auto;
-  max-width: 500px;
-  width: 100%;
+	margin: 0 auto;
+	max-width: 500px;
+	width: 100%;
 }
-
-/* ===============================
-   REMOVE MODEL IMAGE (ALL SCREENS)
-   =============================== */
-.model-wrapper,
-.model-bg,
-.model-img {
-  display: none !important;
+/* ===============================REMOVE MODEL IMAGE (ALL SCREENS)=============================== */
+.model-wrapper,.model-bg,.model-img {
+	display: none !important;
 }
-
 .bundle-pill {
-  padding: 18px 20px;
-  border-radius: 16px;
-  background: #87a9b8;
-  /* same pill color */
-  color: #fff;
-  text-align: center;
+	padding: 18px 20px;
+	border-radius: 16px;
+	background: #87a9b8;
+	/* same pill color */
+	color: #fff;
+	text-align: center;
 }
-
 .bundle-title {
-  font-size: 20px;
-  font-weight: 600;
+	font-size: 20px;
+	font-weight: 600;
 }
-
 .bundle-starting-price {
-  margin-top: 6px;
-  font-size: 15px;
+	margin-top: 6px;
+	font-size: 15px;
 }
-
 .bundle-subtext {
-  margin-top: 6px;
-  font-size: 14px;
-  opacity: 0.95;
+	margin-top: 6px;
+	font-size: 14px;
+	opacity: 0.95;
 }
-
 .bundle-link-text {
-  font-weight: 500;
-  text-decoration: underline;
+	font-weight: 500;
+	text-decoration: underline;
 }
-
-/* ===============================
-   BUNDLE PILL – MOBILE VIEW
-   =============================== */
+/* ===============================BUNDLE PILL – MOBILE VIEW=============================== */
 @media (max-width: 768px) {
-
-  .bundle-pill {
-    padding: 16px 14px;
-    border-radius: 14px;
-    text-align: center;
-  }
-
-  .bundle-title {
-    font-size: 18px;
-    line-height: 1.25;
-  }
-
-  .bundle-starting-price {
-    margin-top: 4px;
-    font-size: 14px;
-  }
-
-  .bundle-subtext {
-    margin-top: 6px;
-    font-size: 13px;
-    line-height: 1.35;
-  }
-
-  .bundle-link-text {
-    font-size: 13px;
-  }
-
-  .pricing-cards {
-    height: auto !important;
-  }
+	.bundle-pill {
+		padding: 16px 14px;
+		border-radius: 14px;
+		text-align: center;
+	}
+	.bundle-title {
+		font-size: 18px;
+		line-height: 1.25;
+	}
+	.bundle-starting-price {
+		margin-top: 4px;
+		font-size: 14px;
+	}
+	.bundle-subtext {
+		margin-top: 6px;
+		font-size: 13px;
+		line-height: 1.35;
+	}
+	.bundle-link-text {
+		font-size: 13px;
+	}
+	.pricing-cards {
+		height: auto !important;
+	}
 }
-
-/* ===============================
-   FIX PRICING CARD HEIGHT ON MOBILE
-   =============================== */
+/* ===============================FIX PRICING CARD HEIGHT ON MOBILE=============================== */
 @media (max-width: 768px) {
-
-  /* Allow card to grow naturally */
-  .pricing-card {
-    height: auto !important;
-    min-height: 300px !important;
-    overflow: visible !important;
-  }
-
-  /* Let body expand with content */
-  .card-body {
-    padding-bottom: 16px !important;
-  }
-
-  /* Footer should NOT be absolute on mobile */
-  .card-footer {
-    position: relative !important;
-    bottom: auto !important;
-    margin-top: -25px;
-    padding-bottom: 0;
-  }
+	/* Allow card to grow naturally */
+	.pricing-card {
+		height: auto !important;
+		min-height: 300px !important;
+		overflow: visible !important;
+	}
+	/* Let body expand with content */
+	.card-body {
+		padding-bottom: 16px !important;
+	}
+	/* Footer should NOT be absolute on mobile */
+	.card-footer {
+		position: relative !important;
+		bottom: auto !important;
+		margin-top: -25px;
+		padding-bottom: 0;
+	}
 }
-
-/* ===============================
-   MOBILE BANNER BOX FIX
-   =============================== */
+/* ===============================MOBILE BANNER BOX FIX=============================== */
 @media (max-width: 768px) {
-
-  .banner-box {
-    height: auto !important;
-    /* 🔑 remove fixed height */
-    min-height: unset !important;
-    padding: 28px 16px 24px;
-    /* tighter vertical spacing */
-    border-radius: 18px;
-  }
-
-  .banner-btn {
-    font-size: 16px;
-    padding: 12px 28px;
-  }
-
-  .banner-img-wrap {
-    margin-top: 16px;
-  }
-
-  .banner-img {
-    width: 130% !important;
-    height: auto !important;
-    max-height: 260px;
-    object-fit: contain;
-  }
+	.banner-box {
+		height: auto !important;
+		/* 🔑 remove fixed height */
+		min-height: unset !important;
+		padding: 28px 16px 24px;
+		/* tighter vertical spacing */
+		border-radius: 18px;
+	}
+	.banner-btn {
+		font-size: 16px;
+		padding: 12px 28px;
+	}
+	.banner-img-wrap {
+		margin-top: 16px;
+	}
+	.banner-img {
+		width: 130% !important;
+		height: auto !important;
+		max-height: 260px;
+		object-fit: contain;
+	}
 }
-
-/* ===============================
-   MOBILE PRODUCT CARD SIZE FIX
-   =============================== */
+/* ===============================MOBILE PRODUCT CARD SIZE FIX=============================== */
 @media (max-width: 768px) {
-
-  /* Section container tighter */
-  .products-container {
-    padding: 0 12px;
-  }
-
-  /* 1 card per line (already 1fr, but enforce clean spacing) */
-  .products-cards {
-    grid-template-columns: 1fr !important;
-    gap: 14px;
-  }
-
-  /* Card sizing */
-  .product-card {
-    max-width: 320px;
-    /* 🔑 controls card width */
-
-    margin: 0 auto;
-    /* center card */
-    padding: 14px 14px 16px;
-    /* tighter padding */
-    border-radius: 16px;
-  }
-
-  /* Image smaller */
-  .product-img {
-    max-width: 220px;
-    margin-bottom: 8px;
-  }
-
-  /* Title */
-  .product-card h3 {
-    font-size: 16px;
-    margin-top: 4px;
-  }
-
-  /* Price badge */
-  .price {
-    font-size: 12px;
-    padding: 3px 0;
-    margin-bottom: 6px;
-  }
-
-  /* Description tighter */
-  .desc {
-    font-size: 12px;
-    line-height: 1.4;
-    margin: 6px 0 10px;
-  }
-
-  /* CTA buttons */
-  .prod-btn {
-    font-size: 14px;
-    padding: 0px 0;
-    border-radius: 26px;
-    margin-bottom: 10px;
-  }
-
-  .btn-outline-sm {
-    font-size: 12px;
-    padding: 7px 0;
-  }
+	/* Section container tighter */
+	.products-container {
+		padding: 0 12px;
+	}
+	/* 1 card per line (already 1fr, but enforce clean spacing) */
+	.products-cards {
+		grid-template-columns: 1fr !important;
+		gap: 14px;
+	}
+	/* Card sizing */
+	.product-card {
+		max-width: 320px;
+		/* 🔑 controls card width */
+		margin: 0 auto;
+		/* center card */
+		padding: 14px 14px 16px;
+		/* tighter padding */
+		border-radius: 16px;
+	}
+	/* Image smaller */
+	.product-img {
+		max-width: 220px;
+		margin-bottom: 8px;
+	}
+	/* Title */
+	.product-card h3 {
+		font-size: 16px;
+		margin-top: 4px;
+	}
+	/* Price badge */
+	.price {
+		font-size: 12px;
+		padding: 3px 0;
+		margin-bottom: 6px;
+	}
+	/* Description tighter */
+	.desc {
+		font-size: 12px;
+		line-height: 1.4;
+		margin: 6px 0 10px;
+	}
+	/* CTA buttons */
+	.prod-btn {
+		font-size: 14px;
+		padding: 0px 0;
+		border-radius: 26px;
+		margin-bottom: 10px;
+	}
+	.btn-outline-sm {
+		font-size: 12px;
+		padding: 7px 0;
+	}
 }
-
 @media (max-width: 768px) {
-
-  /* Allow text to fit screen */
-  #line1,
-  #line2 {
-    font-size: 30px !important;
-    min-width: unset !important;
-    /* 🔑 remove desktop lock */
-    max-width: 100%;
-    white-space: normal;
-    /* allow wrapping */
-    text-align: center;
-    margin-left: auto !important;
-  }
-
-  /* Center hero text safely on mobile */
-  .hero-title {
-    text-align: center;
-  }
-
-  /* Prevent horizontal overflow */
-  .hero {
-    overflow-x: hidden;
-  }
-
+	/* Allow text to fit screen */
+	#line1,#line2 {
+		font-size: 30px !important;
+		min-width: unset !important;
+		/* 🔑 remove desktop lock */
+		max-width: 100%;
+		white-space: normal;
+		/* allow wrapping */
+		text-align: center;
+		margin-left: auto !important;
+	}
+	/* Center hero text safely on mobile */
+	.hero-title {
+		text-align: center;
+	}
+	/* Prevent horizontal overflow */
+	.hero {
+		overflow-x: hidden;
+	}
 }
