@@ -121,7 +121,8 @@ body {
 .hero-title {
   display: inline-flex;
   align-items: baseline;
-  gap: 0;               /* 🔑 kill flex gap */
+  gap: 0;
+  /* 🔑 kill flex gap */
   white-space: nowrap;
   text-align: left;
 }
@@ -133,7 +134,8 @@ body {
 }
 
 #line2 {
-  margin-left: -20px;     /* 👈 perfect comma spacing */
+  margin-left: -20px;
+  /* 👈 perfect comma spacing */
 }
 
 
@@ -149,7 +151,8 @@ body {
   white-space: nowrap;
 
   /* 🔑 CRITICAL FIX */
-  min-width: 520px;   /* adjust to your longest phrase */
+  min-width: 520px;
+  /* adjust to your longest phrase */
 }
 
 
@@ -354,6 +357,15 @@ body {
 
   .benefits-card {
     grid-template-columns: 1fr;
+  }
+  .disclaimer {
+    padding-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px !important;
+  }
+
+  .disclaimer   p{
+    font-size: 9px;
   }
 }
 
@@ -873,6 +885,7 @@ body {
   .hero {
     padding-top: 15px;
     text-align: center;
+    padding-bottom: 20px;
   }
 
   .hero-grid {
@@ -984,17 +997,27 @@ body {
     margin-bottom: -70px;
   }
 
+  .banner-box p {
+    font-size: 12px;
+  }
+
 
   /* ======================
      PRODUCTS SECTION
      ====================== */
 
+  .products-section {
+    padding-bottom: 60px;
+    margin-top: 10px;
+    border-radius: var(--mobile-radius) var(--mobile-radius) 0 0;
+  }
   .products-title {
-    font-size: var(--h1-size);
+    padding-top: 20px;
+    font-size: 26.7px;
   }
 
   .products-subtitle {
-    font-size: var(--text-size);
+    font-size: 11px;
   }
 
   .products-cards {
@@ -1136,9 +1159,9 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     margin: -30px auto 0;
-    padding: 7px 7px;
+    padding: 9px 9px;
     border-radius: 18px;
-    max-width: 76%;
+    max-width: 90%;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
   }
 
@@ -1148,12 +1171,12 @@ body {
   }
 
   .benefit img {
-    width: 15px;
+    width: 20px;
     margin-bottom: 4px;
   }
 
   .benefit p {
-    font-size: 5px;
+    font-size: 9px;
     line-height: 1.3;
   }
 }
@@ -1676,9 +1699,11 @@ body {
 @media (max-width: 768px) {
 
   .banner-box {
-    height: auto !important;          /* 🔑 remove fixed height */
+    height: auto !important;
+    /* 🔑 remove fixed height */
     min-height: unset !important;
-    padding: 28px 16px 24px;           /* tighter vertical spacing */
+    padding: 28px 16px 24px;
+    /* tighter vertical spacing */
     border-radius: 18px;
   }
 
@@ -1717,10 +1742,13 @@ body {
 
   /* Card sizing */
   .product-card {
-    max-width: 320px;        /* 🔑 controls card width */
+    max-width: 320px;
+    /* 🔑 controls card width */
 
-    margin: 0 auto;          /* center card */
-    padding: 14px 14px 16px; /* tighter padding */
+    margin: 0 auto;
+    /* center card */
+    padding: 14px 14px 16px;
+    /* tighter padding */
     border-radius: 16px;
   }
 
@@ -1770,9 +1798,11 @@ body {
   #line1,
   #line2 {
     font-size: 30px !important;
-    min-width: unset !important;   /* 🔑 remove desktop lock */
+    min-width: unset !important;
+    /* 🔑 remove desktop lock */
     max-width: 100%;
-    white-space: normal;           /* allow wrapping */
+    white-space: normal;
+    /* allow wrapping */
     text-align: center;
     margin-left: auto !important;
   }
