@@ -1013,8 +1013,8 @@ body {
     border-radius: var(--mobile-radius) var(--mobile-radius) 0 0;
   }
   .products-title {
-    padding-top: 20px;
-    font-size: 26.7px;
+    padding-top: 30px;
+    font-size: 24px;
   }
 
   .products-subtitle {
